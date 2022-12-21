@@ -1,0 +1,16 @@
+Tôi muốn kết hôn với chồng là người mang quốc tịch Trung Quốc ...
+
+kh co ytnn
+=> V1 = KH , V2 = có yếu tố nước ngoài
+
+Vp = KH có yếu tố nước ngoài
+
+K = 5  -> recall@5\
+
+[:5]
+
+VP = V1 + V2 + V3
+
+# handle index error when value is not in list
+
+{'thủ tục đăng ký kết hôn': 0.9230769230769231, 'thủ tục đăng ký khai sinh': 0.7857142857142857, 'thủ tục đăng ký khai tử': 0.8, 'thủ tục ghi vào sổ hộ tịch việc ly hôn, hủy việc kết hôn của công dân việt nam đã được giải quyết tại cơ quan có thẩm quyền của nước ngoài': 1.0, 'khai báo với sở lao động – thương binh và xã hội địa phương khi đưa vào sử dụng các loại máy, thiết bị, vật tư có yêu cầu nghiêm ngặt về an toàn lao động': 1.0, 'thủ tục giải quyết hưởng trợ cấp thất nghiệp': 0.8181818181818182, 'thủ tục chứng thực di chúc': 1.0}

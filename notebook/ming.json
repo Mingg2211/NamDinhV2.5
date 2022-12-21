@@ -1,0 +1,13 @@
+{
+    "LinhVuc":["linh vuc", "Linh vuc"],
+    "Coquanthuchien":["co quan thuc hien", "Co quan thuc hien", "co quan nao", "co quan", "Don vi nao", "don vi"],
+    "Cachthucthuchien":["cach thuc thuc hien", "truc tuyen", "truc tiep", "qua duong buu dien", "buu dien"],
+    "Doituongthuchien":["Doi tuong thuc hien"],
+    "Thoigiangiaiquyet":["thoi gian giai quyet","thoi han giai quyet"],
+    "Lephi":["le phi", "Le phi", "chi phi", "bao nhieu tien","mat tien khong","phi"],
+    "Mautokhai":["mau don", "mau to khai", "mau thu tuc"],
+    "Ketquathuchien":["ket qua thuc hien"],
+    "Trinhtu":["trinh tu", "cac buoc","quy trinh","thuc hien"], 
+    "Hoso":["ho so", "giay to can nop", "giay to can chuan bi", "can nop giay to", "can chuan bi giay to", "giay to phai xuat trinh", "giay to phai nop", "phai xuat trinh giay to", "phai nop giay to", "phai chuan bi giay to","nhung giay to","nhung ho so"],
+    "Dieukien":["dieu kien", "co duoc"]
+}
