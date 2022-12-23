@@ -201,6 +201,12 @@
     "tru luong khoang san" : ["tru luong khoang san"],
     "khoang san" : ["khoang san"],
     "moi truong" : ["moi truong"],
+    "che do uu dai" : ["che do uu dai"],
+    "tro cap uu dai" : ["tro cap uu dai"],
+    "huong che do" : ["huong che do"],
+    "che do con de" : ["che do con de"],
+    "che do tro cap" : ["che do tro cap"],
+
     "co yeu to nuoc ngoai": [
         "co yeu to nuoc ngoai",
         "nguoi nuoc ngoai",
@@ -247,5 +253,6 @@
     "thiet lap" : ["thiet lap"],
     "le": ["le"],
     "cong nhan" : ["cong nhan"],
+    "tu giai the" : ["tu giai the"],
     "giai the" : ["giai the"]
 }
