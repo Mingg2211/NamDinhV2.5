@@ -46,13 +46,13 @@ def bot_understand(user_question: str):
         
     for key in keyword_dict.keys():
         for val in keyword_dict[key]:
-            if val in user_question:
+            if (str(val) +' ') in user_question:
                 keyword_list.append(key)
                 user_question = user_question.replace(val, '')
 
     for key in action_dict.keys():
         for val in action_dict[key]:
-            if val in user_question:
+            if (str(val) +' ') in user_question:
                 action.append(key)
                 user_question = user_question.replace(val, '')
     
@@ -67,6 +67,7 @@ def bot_understand(user_question: str):
 def search_token_in_database(user_token):
     df = pd.read_csv('../data/new_procedure.csv', engine='python')
     # print(df.info())
+    user_token = r'\b'+user_token+r'\b'
     procedures = df[df.procedure_name.str.contains(user_token, na=False)].id
     procedure_list = procedures.tolist()
     # print(procedures.tolist())
@@ -132,6 +133,7 @@ def bot_searching(user_question: str):
         # Lấy K=5
         if result:
             tmp = result[:5]
+            # tmp = sorted(tmp, key=len)
             response_json = []
             for item in tmp:
                 response_json.append({'procedure': item, 'action': action})
@@ -140,6 +142,7 @@ def bot_searching(user_question: str):
             return "Tôi chưa được học thủ tục này :("
     else:
         list_user_token = word_tokenize(user_question)
+        print(list_user_token)
         tmp = []
         for token in list_user_token:
             tmp += search_token_in_database(token)
@@ -155,7 +158,7 @@ def bot_searching(user_question: str):
             return response_json
         else:
             return "Tôi chưa được học thủ tục này :("
-print(bot_searching('Tối muốn đăng ký kết hôn'))
+print(bot_searching('Quy trình thực hiện để tự giải quyết thể quỹ'))
 
 def bot_answer(procedure_name, action):
     df = pd.read_csv('../data/new_procedure.csv', engine='python')
@@ -178,5 +181,5 @@ def mingg(user_question:str):
     final_answer = bot_answer(best_matching['procedure'], best_matching['action'])
     return final_answer
 
-print(mingg('tôi muốn cưới chồng người nước ngoài'))
+# print(mingg('tôi muốn cưới chồng người nước ngoài'))
     
