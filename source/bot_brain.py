@@ -43,25 +43,27 @@ def bot_understand(user_question: str):
         
     with open('../json_data/action.json', 'r', encoding='utf-8') as f2:
         action_dict = json.load(f2)
-        
-    for key in keyword_dict.keys():
-        for val in keyword_dict[key]:
-            if (str(val) +' ') in user_question:
-                keyword_list.append(key)
-                user_question = user_question.replace(val, '')
 
     for key in action_dict.keys():
         for val in action_dict[key]:
-            if (str(val) +' ') in user_question:
+            if str(val) +' ' in user_question or val in user_question:
                 action.append(key)
                 user_question = user_question.replace(val, '')
     
+        
+    for key in keyword_dict.keys():
+        for val in keyword_dict[key]:
+            if str(val) +' ' in user_question or val in user_question:
+                keyword_list.append(key)
+                user_question = user_question.replace(val, '')
+                
+
     BOT_MEMORY.update({'keywords': keyword_list})
     BOT_MEMORY.update({'action': action})
     
     return BOT_MEMORY
 
-# print(bot_understand('Tối muốn đăng ký kết hôn với người nước ngoài thì cần phải chuẩn bị giấy tờ gì lệ phí'))
+# print(bot_understand('che do uu dai'))
 
 
 def search_token_in_database(user_token):
@@ -158,7 +160,7 @@ def bot_searching(user_question: str):
             return response_json
         else:
             return "Tôi chưa được học thủ tục này :("
-print(bot_searching('Quy trình thực hiện để tự giải quyết thể quỹ'))
+print(bot_searching('Hồ sơ về hưởng lại chế độ ưu đãi'))
 
 def bot_answer(procedure_name, action):
     df = pd.read_csv('../data/new_procedure.csv', engine='python')
