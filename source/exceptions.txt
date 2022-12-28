@@ -10,3 +10,7 @@ Những giấy tờ gì phải trình khi đăng kí kết hôn?
 Đơn vị nào sẽ tiếp nhận hồ sơ kết hôn?
 Đăng ký kết hôn có mất phí không?
 Tôi muốn lây chồng nước ngoài thi thủ túc kết hôn thế nào.
+
+
+Hồ sơ thủ tục ra nước ngoài dự thi người đẹp, người mẫu cần những gì? => chỉnh sửa search list token
+chỉnh sửa matching whole word => chinh sua bot understand

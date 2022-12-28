@@ -24,7 +24,7 @@ class Item(BaseModel):
 def ranking_utter(item: Item):
     if item!='' and item:
         
-        result = mingg(item.value)
+        result = bot_searching(item.value)
     else:
         result = "Nhập lại nhé"
     return {"ranking_answer": result}

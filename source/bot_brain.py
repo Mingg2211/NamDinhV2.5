@@ -22,10 +22,17 @@ def remove_tone_line(utf8_str):
 
 def preprocessing(text):
     text = remove_tone_line(text)
-    text = text.lower().replace('thu tuc','')
+    text = text.lower()
+    #stopwords 
+    stopwords = ['thu tuc', 'giai quyet', 'cho hoi', 'cho toi hoi', 'cho toi hoi ve', 'toi muon hoi', 'quy dinh']
+    for word in stopwords:
+        if word in text:
+            text = text.replace(word, "")
     text = re.sub(' +', ' ',text)
     text = re.sub(r'[^\s\wáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịúùủũụưứừửữựýỳỷỹỵđ_\.\,]',' ',text)
-    return text
+    return text.strip()
+
+# print(preprocessing('cho toi hoi ve thu tuc giai quyet khieu nai'))
 
 def remove_dup(result_list):
     tmp_list = list(dict.fromkeys(result_list))
@@ -43,17 +50,17 @@ def bot_understand(user_question: str):
         
     with open('../json_data/action.json', 'r', encoding='utf-8') as f2:
         action_dict = json.load(f2)
-
+    
     for key in action_dict.keys():
         for val in action_dict[key]:
-            if str(val) +' ' in user_question or val in user_question:
+            if (re.search(r'\b'+val+r'\b', user_question)):
                 action.append(key)
                 user_question = user_question.replace(val, '')
     
         
     for key in keyword_dict.keys():
         for val in keyword_dict[key]:
-            if str(val) +' ' in user_question or val in user_question:
+            if (re.search(r'\b'+val+r'\b', user_question)):
                 keyword_list.append(key)
                 user_question = user_question.replace(val, '')
                 
@@ -70,7 +77,7 @@ def search_token_in_database(user_token):
     df = pd.read_csv('../data/new_procedure.csv', engine='python')
     # print(df.info())
     user_token = r'\b'+user_token+r'\b'
-    procedures = df[df.procedure_name.str.contains(user_token, na=False)].id
+    procedures = df[df.procedure_name.str.contains(pat=user_token, na=False, regex=True)].id
     procedure_list = procedures.tolist()
     # print(procedures.tolist())
     # flatten 2d listresponse
@@ -78,33 +85,36 @@ def search_token_in_database(user_token):
     # print(procedure_list)
     procedure_list = sorted(procedure_list, key=len)
     return procedure_list
-
-# print(search_token_in_database('kết hôn'))
+# print(search_token_in_database('ket hon'))
 
 def search_list_token_in_database(list_user_token: list):
     tmp_list = []
     for token in list_user_token:
         tmp_list += search_token_in_database(token)
-    if len(list_user_token) == 2:
+    print(len(tmp_list))
+    n = len(list_user_token)
+    if n == 2 :
         df = pd.DataFrame({'procedure': tmp_list})
 
         df1 = pd.DataFrame(data=df['procedure'].value_counts())
 
         df1['Count'] = df1['procedure'].index
 
-        mingg = list(df1[df1['procedure'] == 2]['Count'])
+        mingg = list(df1[df1['procedure'] == n]['Count'])
 
         return mingg
-    elif len(list_user_token) == 3:
+    if n == 3:
         df = pd.DataFrame({'procedure': tmp_list})
 
         df1 = pd.DataFrame(data=df['procedure'].value_counts())
 
         df1['Count'] = df1['procedure'].index
 
-        mingg = list(df1[df1['procedure'] == 3]['Count'])
+        mingg = list(df1[df1['procedure'] >= n-1]['Count'])
 
         return mingg
+
+# print(search_list_token_in_database(['ket hon', 'luu dong']))
 
 
 def bot_searching(user_question: str):
@@ -128,6 +138,7 @@ def bot_searching(user_question: str):
             DUP_procedure_list = search_list_token_in_database(keywords)
             if DUP_procedure_list:
                 result += DUP_procedure_list
+                # print(result)
         print(keywords)
         if len(keywords) != 0:
             result += search_token_in_database(keywords[0])
@@ -143,24 +154,24 @@ def bot_searching(user_question: str):
         else:
             return "Tôi chưa được học thủ tục này :("
     else:
-        list_user_token = word_tokenize(user_question)
-        print(list_user_token)
-        tmp = []
-        for token in list_user_token:
-            tmp += search_token_in_database(token)
-        df = pd.DataFrame({'procedure': tmp})
-        df1 = pd.DataFrame(data=df['procedure'].value_counts())
-        df1['Count'] = df1['procedure'].index
-        result = list(df1[df1['procedure'] >= df1.procedure.max()-3]['Count'])
-        if result:
-            tmp = result[:5]
-            response_json = []
-            for item in tmp:
-                response_json.append({'procedure': item, 'action': action})
-            return response_json
-        else:
-            return "Tôi chưa được học thủ tục này :("
-print(bot_searching('Hồ sơ về hưởng lại chế độ ưu đãi'))
+        # list_user_token = word_tokenize(user_question)
+        # print(list_user_token)
+        # tmp = []
+        # for token in list_user_token:
+        #     tmp += search_token_in_database(token)
+        # df = pd.DataFrame({'procedure': tmp})
+        # df1 = pd.DataFrame(data=df['procedure'].value_counts())
+        # df1['Count'] = df1['procedure'].index
+        # result = list(df1[df1['procedure'] >= df1.procedure.max()-2]['Count'])
+        # if result:
+        #     tmp = result[:5]
+        #     response_json = []
+        #     for item in tmp:
+        #         response_json.append({'procedure': item, 'action': action})
+        #     return response_json
+        # else:
+        return "Tôi chưa được học thủ tục này :("
+# print(bot_searching('Thời hạn giải quyết thủ tục cấp lại giấy đăng ký tham gia trợ giúp pháp lý?'))
 
 def bot_answer(procedure_name, action):
     df = pd.read_csv('../data/new_procedure.csv', engine='python')
