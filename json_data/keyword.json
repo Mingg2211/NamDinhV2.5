@@ -50,6 +50,8 @@
     "bien dong quyen su dung dat": [
         "bien dong quyen su dung dat"
     ],
+    "quyen su dung dat" : ["quyen su dung dat"],
+    "su dung dat" : ["su dung dat"],
     "dang ky dat dai": [
         "dang ky dat dai",
         "dang ky dat",
@@ -93,11 +95,13 @@
     "tre mau giao": [
         "tre mau giao"
     ],
+    "nhom tre" : ["nhom tre"],
     "truong mau giao": [
         "truong mam non",
         "truong mau giao",
         "nha tre"
     ],
+    "lop mau giao" : ["lop mau giao"],
     "mau giao": [
         "mau giao"
     ],
@@ -143,11 +147,16 @@
     "quang cao phan bon" : ["quang cao phan bon"],
     "quang cao" : ["quang cao"],
     "giay phep ban le san pham thuoc la" : ["giay phep ban le san pham thuoc la", "giay phep ban le thuoc la", "giay phep ban thuoc la"],
+    "san pham thuoc la" : ["san pham thuoc la"],
+    "thuoc la" : ["thuoc la"],
     "giay phep ban le ruou" : ["giay phep ban le ruou"],
     "giay phep ban le" : ["giay phep ban le"],
+    "ban le thuoc luu dong" : ["ban le thuoc luu dong"],
+    "thuoc luu dong" : ["thuoc luu dong"],
     "giay phep buu chinh" : ["giay phep buu chinh"],
     "buu chinh" : ["buu chinh"],
     "ban le" : ["ban le"],
+    "ban buon" : ["ban buon"],
     "truong trung cap tu thuc": [
         "truong trung cap tu thuc"
     ],
@@ -184,6 +193,7 @@
     "diem du lich" : ["diem du lich"],
     "khu cong nghiep" : ["khu cong nghiep"],
     "ben xe khach" : ["ben xe khach"],
+    "tram dung nghi" : ["tram dung nghi"],
     "giao dat": ["giao dat"],
     "giao khu vuc bien": ["giao khu vuc bien"],
     "giao khu vuc": ["giao khu vuc"],
@@ -206,6 +216,7 @@
     "tro giup xa hoi" : ["tro giup xa hoi"],
     "xa hoi" : ["xa hoi"],
     "le hoi" : ["le hoi"],
+    "thuong luong" : ["thuong luong"],
     "dai hoi" : ["dai hoi"],
     "hoi dong" : ["hoi dong"],
     "hoi nghi" : ["hoi nghi"],
@@ -236,6 +247,8 @@
     "so goc" : ["so goc"],
     "tham vieng mo liet si" : ["tham vieng mo liet si", "tham vieng liet si"],
     "liet si hy sinh" : ["liet si hy sinh", "liet si hi sinh"],
+    "di chuyen hai cot liet si" : ["di chuyen hai cot liet si"],
+    "di chuyen hai cot" : ["di chuyen hai cot"],
     "liet si" : ["liet si"],
     "xu ly nuoc thai" : ["xu ly nuoc thai"],
     "xu ly don" : ["xu ly don"],
@@ -253,6 +266,12 @@
     "tan thu khoang san" : ["tan thu khoang san"],
     "tru luong khoang san" : ["tru luong khoang san"],
     "khoang san" : ["khoang san"],
+    "khai thac nuoc duoi dat" : ["khai thac nuoc duoi dat"],
+    "khai thac nuoc" : ["khai thac nuoc"],
+    "tai nguyen nuoc" : ["tai nguyen nuoc"],
+    "khai quat khan cap" : ["khai quat khan cap"],
+    "khai quat" : ["khai quat"],
+    "khai thac" : ["khai thac"],
     "moi truong" : ["moi truong"],
     "che do uu dai" : ["che do uu dai"],
     "tro cap uu dai" : ["tro cap uu dai"],
@@ -268,9 +287,12 @@
     "cai nghien ma tuy" : ["cai nghien ma tuy"],
     "cai nghien" : ["cai nghien"],
     "ma tuy" : ["ma tuy"],
+    "noi quy lao dong" : ["noi quy lao dong"],
     "thue lai lao dong" : ["thue lai lao dong"],
+    "lao dong" : ["lao dong"],
     "cho thue lai" : ["cho thue lai"],
     "thue lai" : ["thue lai"],
+    "noi quy" : ["noi quy"],
     "thuc hanh lai xe" : ["thuc hanh lai xe"],
     "sat hach lai xe" : ["sat hach lai xe"],
     "giay phep lai xe" : ["giay phep lai xe"],
@@ -283,9 +305,11 @@
     "xe quan su" : ["xe quan su"],
     "lai xe o to" : ["lai xe o to"],
     "xe o to" : ["xe o to", "o to"],
+    "phuong tien" : ["phuong tien"],
     "dich vu photocopy" : ["dich vu photocopy"],
     "photocopy" : ["photocopy"],
     "nguoi dep, nguoi mau" : ["nguoi dep, nguoi mau", "nguoi dep", "nguoi mau", "hoa hau", "sac dep"],
+    "to hoa giai" : ["to hoa giai"],
     "hoa giai vien" : ["hoa giai vien"],
     "van phong cong chung" : ["van phong cong chung"],
     "cong chung vien" : ["cong chung vien"],
@@ -293,6 +317,7 @@
     "dau gia vien" : ["dau gia vien"],
     "tu van vien" : ["tu van vien"],
     "tu van" : ["tu van"],
+    "giam dinh vien" : ["giam dinh vien"],
 
     "cong ty ha tang" : ["cong ty ha tang"],
     "cong ty nha nuoc" : ["cong ty nha nuoc"],
@@ -307,6 +332,7 @@
     "tro giup phap ly" : ["tro giup phap ly"],
     "phap ly" : ["phap ly"],
     "phap luat" : ["phap luat"],
+    "tu phap" : ["tu phap"],
     "cong ty" : ["cong ty"],
     "doanh nghiep tu nhan" : ["doanh nghiep tu nhan"],
     "doanh nghiep kinh doanh" : ["doanh nghiep kinh doanh"],
@@ -340,6 +366,7 @@
     "tro lai quoc tich" : ["tro lai quoc tich"],
     "quoc tich" : ["quoc tich"],
     "ben thuy noi dia" : ["ben thuy noi dia","ben thuy"],
+    "cang thuy noi dia" : ["cang thuy noi dia"],
     "chat luong muoi" : ["chat luong muoi", "muoi"],
     "van phong" : ["van phong"],
     "khuyet tat" : ["khuyet tat"],
@@ -351,6 +378,17 @@
     "van bang" : ["van bang"],
     "chung chi" : ["chung chi"],
     "dau dinh luong" : ["dau dinh luong"],
+    "do dac va ban do" : ["do dac va ban do"],
+    "do dac" : ["do dac"],
+    "ban do" : ["ban do"],
+    "thanh ly" : ["thanh ly"],
+    "tieu huy" : ["tieu huy"],
+    "nguon goc go" : ["nguon goc go"],
+    "nguon goc" : ["nguon goc"],
+    "go" : ["go"],
+
+
+
 
     "du thi" : ["du thi"],
     "nuoc ngoai" : ["nuoc ngoai"],
@@ -374,6 +412,8 @@
     "cap the": [
         "cap the"
     ],
+    "cap doi" : ["cap doi"],
+    "cap lai" : ["cap lai"],
     "cap huyen" : ["cap huyen"],
     "cap xa" : ["cap xa"],
     "cap tinh" : ["cap tinh"],
@@ -394,6 +434,9 @@
     "hoat dong tro lai": [
         "hoat dong tro lai"
     ],
+    "lai hoat dong" : ["lai hoat dong"],
+    "cham dut hoat dong" : ["cham dut hoat dong"],
+    "cham dut" : ["cham dut"],
     "tro lai": [
         "tro lai"
     ],
@@ -413,5 +456,9 @@
     "loai 3" : ["loai 3", "loai ba"],
     "phat lai" : ["phat lai"],
     "nhap khau" : ["nhap khau"],
-    "trong nuoc" : ["trong nuoc"]
+    "trong nuoc" : ["trong nuoc"],
+    "to truong" : ["to truong"],
+    "tiep nhan" : ["tiep nhan"],
+    "tap the" : ["tap the"],
+    "nhuong quyen" : ["nhuong quyen"]
 }
