@@ -1,16 +1,666 @@
-Tôi muốn kết hôn với chồng là người mang quốc tịch Trung Quốc ...
-
-kh co ytnn
-=> V1 = KH , V2 = có yếu tố nước ngoài
-
-Vp = KH có yếu tố nước ngoài
-
-K = 5  -> recall@5\
-
-[:5]
-
-VP = V1 + V2 + V3
-
-# handle index error when value is not in list
-
-{'thủ tục đăng ký kết hôn': 0.9230769230769231, 'thủ tục đăng ký khai sinh': 0.7857142857142857, 'thủ tục đăng ký khai tử': 0.8, 'thủ tục ghi vào sổ hộ tịch việc ly hôn, hủy việc kết hôn của công dân việt nam đã được giải quyết tại cơ quan có thẩm quyền của nước ngoài': 1.0, 'khai báo với sở lao động – thương binh và xã hội địa phương khi đưa vào sử dụng các loại máy, thiết bị, vật tư có yêu cầu nghiêm ngặt về an toàn lao động': 1.0, 'thủ tục giải quyết hưởng trợ cấp thất nghiệp': 0.8181818181818182, 'thủ tục chứng thực di chúc': 1.0}
+thủ_tục thông_báo nhà ở hình_thành trong tương_lai đủ điều_kiện được bán , cho thuê mua
+thủ_tục cho thuê , thuê mua nhà_ở xã_hội thuộc sở_hữu nhà_nước
+thủ_tục cho thuê nhà ở cũ thuộc sở_hữu nhà_nước
+cấp giấy_phép hoạt_động xây_dựng cho nhà_thầu nước_ngoài thuộc dự_án nhóm b , nhóm c
+điều_chỉnh giấy_phép hoạt_động xây_dựng cho nhà_thầu nước_ngoài thuộc dự_án nhóm b , nhóm c
+thủ_tục thẩm_định báo_cáo nghiên_cứu khả_thi đầu_tư xây_dựng / điều_chỉnh báo_cáo nghiên_cứu khả_thi đầu_tư xây_dựng
+thủ_tục thẩm_định thiết_kế xây_dựng triển_khai sau thiết_kế cơ_sở / điều_chỉnh thiết_kế xây_dựng triển_khai sau thiết_kế cơ_sở
+thủ_tục kiểm_tra công_tác nghiệm_thu hoàn_thành công_trình ( đối_với các công_trình trên địa_bàn thuộc trách_nhiệm quản_lý của sở xây_dựng , sở quản_lý công_trình xây_dựng chuyên_ngành , trừ các công_trình thuộc thẩm_quyền kiểm_tra của hội_đồng kiểm_tra nhà_nước về công_tác nghiệm_thu công_trình xây_dựng và cơ_quan_chuyên_môn thuộc bộ xây_dựng , bộ quản_lý công_trình chuyên_ngành )
+thủ_tục cấp sửa_đổi , bổ_sung giấy xác_nhận đủ điều_kiện làm tổng đại_lý kinh_doanh xăng dầu
+thủ_tục cấp giấy xác_nhận đủ điều_kiện làm đại_lý bán_lẻ xăng dầu
+thủ_tục cấp sửa_đổi , bổ_sung giấy xác_nhận đủ điều_kiện làm đại_lý bán_lẻ xăng dầu
+cấp giấy_phép bán_buôn rượu trên địa_bàn tỉnh , thành_phố trực_thuộc trung_ương
+cấp sửa_đổi , bổ_sung giấy_phép bán_buôn rượu trên địa bản tỉnh , thành_phố trực_thuộc trung_ương
+xác_nhận bản cam_kết của thương_nhân nhập_khẩu thép để trực_tiếp phục_vụ sản_xuất , gia_công
+thủ_tục phê_duyệt điều_lệ hội
+thủ_tục hợp_nhất , sát_nhập , chia , tách , mở_rộng phạm_vi hoạt_động quỹ
+thủ_tục đăng_ký_kết_quả thực_hiện nhiệm_vụ khoa_học và công_nghệ cấp tỉnh_thành_phố và cấp cơ_sở không sử_dụng ngân_sách nhà_nước
+thủ_tục cấp giấy chứng_nhận tổ_chức đủ điều_kiện hoạt_động giám_định sở_hữu công_nghiệp
+thủ_tục đăng_ký công_bố hợp chuẩn dựa trên kết_quả tự đánh_giá của tổ_chức , cá_nhân sxkd
+thủ_tục giải_quyết hưởng trợ_cấp thất_nghiệp
+thủ_tục tạm dừng hưởng trợ_cấp thất_nghiệp
+thủ_tục tiếp_tục hưởng trợ_cấp thất_nghiệp
+thủ_tục chuyển nơi hưởng trợ_cấp thất_nghiệp ( chuyển đi )
+thủ_tục chuyển nơi hưởng trợ_cấp thất_nghiệp ( chuyển đến )
+giải_quyết phụ_cấp đặc_biệt hằng tháng đối_với thương_binh có tỷ_lệ tổn_thương cơ_thể từ 81_% trở_lên , bệnh_binh có tỷ_lệ tổn_thương cơ_thể từ 81_% trở lên
+hưởng lại chế_độ ưu_đãi
+công_nhận thương_binh , người hưởng chính_sách như thương_binh
+khám giám_định lại tỷ_lệ tổn_thương cơ_thể đối_với trường_hợp còn sót vết_thương , còn sót mảnh kim_khí hoặc có tỷ_lệ tổn_thương cơ_thể tạm_thời hoặc khám giám_định bổ_sung vết_thương và điều_chỉnh chế_độ đối_với trường_hợp không tại_ngũ , công_tác trong quân_đội , công_an
+giải_quyết hưởng thêm một chế_độ trợ_cấp đối_với thương_binh đồng_thời là bệnh_binh
+công_nhận và giải_quyết chế_độ người hoạt_động cách_mạng , kháng_chiến , bảo_vệ tổ_quốc , làm nghĩa_vụ quốc_tế bị địch bắt tù , đày
+giải_quyết chế_độ người hoạt_động kháng_chiến giải_phóng dân_tộc , bảo_vệ tổ_quốc và làm nghĩa_vụ quốc_tế
+giải_quyết chế_độ người có công giúp_đỡ cách_mạng
+sửa_đổi , bổ_sung thông_tin cá_nhân trong hồ_sơ người có công
+di_chuyển hồ_sơ khi người hưởng trợ_cấp ưu_đãi thay_đổi nơi thường_trú
+giải_quyết chế_độ ưu_đãi đối_với trường_hợp tặng hoặc truy_tặng danh_hiệu vinh_dự nhà_nước “ bà mẹ việt nam anh_hùng ”
+tiếp_nhận người có công vào cơ_sở nuôi_dưỡng , điều_dưỡng người có công do tỉnh quản_lý
+công_nhận đối_với người bị_thương trong chiến_tranh không thuộc quân_đội , công_an
+bổ_sung tình_hình thân_nhân trong hồ_sơ liệt_sĩ
+thủ_tục trợ_cấp hàng tháng đối_với thanh_niên xung_phong đã hoàn_thành nhiệm_vụ trong kháng_chiến
+cấp giấy xác_nhận thông_tin về nơi liệt_sĩ hy_sinh
+thủ tuc trợ_giúp xã_hội đột_xuất đối_với người bị_thương nặng ngoài nơi cư_trú mà không có người thân_thích chăm_sóc
+thủ_tục thay_đổi , cải_chính , bổ_sung hộ_tịch , xác_định lại dân_tộc
+thủ_tục sửa_lỗi sai_sót trong hợp_đồng , giao_dịch
+thủ_tục chứng_thực văn_bản thỏa_thuận phân_chia di_sản mà di_sản là động_sản
+thủ_tục chứng_thực văn_bản khai nhận di_sản mà di_sản là động_sản
+thủ_tục thông_báo_danh_mục hoạt_động tôn_giáo đối_với tổ_chức có địa_bàn hoạt_động tôn_giáo ở nhiều xã thuộc một huyện
+thủ_tục thông_báo_danh_mục hoạt_động tôn_giáo bổ_sung đối_với tổ_chức có địa_bàn hoạt_động tôn_giáo ở nhiều xã thuộc một huyện
+thủ_tục thay_đổi , bổ_sung nội_dung giấy chứng_nhận đăng_ký hoạt_động của tổ_chức khoa_học và công_nghệ
+thủ_tục cấp chính_sách nội_trú cho học_sinh , sinh_viên tham_gia chương_trình đào_tạo trình_độ cao_đẳng , trung_cấp tại các cơ_sở giáo_dục nghề_nghiệp công_lập trực_thuộc huyện , quận , thị_xã , thành_phố trực_thuộc tỉnh
+thủ_tục cấp giấy_phép triển_lãm tác_phẩm nhiếp_ảnh tại việt nam ( thẩm_quyền của ủy_ban nhân_dân cấp tỉnh )
+xét , cấp học_bổng chính_sách
+cấp giấy_phép thăm_dò khoáng_sản
+cấp giấy_phép thăm_dò nước dưới đất đối_với công_trình có lưu_lượng dưới 3.000 m3 / ngày_đêm
+gia_hạn , điều_chỉnh nội_dung giấy_phép thăm_dò nước dưới đất đối_với công_trình có lưu_lượng dưới 3.000 m3 / ngày_đêm
+cấp giấy_phép khai_thác , sử_dụng nước dưới đất đối_với công_trình có lưu_lượng dưới 3.000 m3 / ngày_đêm
+thủ_tục cấp giấy_phép vận_chuyển thuốc bảo_vệ thực_vật
+thủ_tục cấp giấy xác_nhận nội_dung quảng_cáo thuốc bảo_vệ thực_vật
+thủ_tục cấp giấy chứng_nhận đủ điều_kiện buôn_bán thuốc bảo_vệ thực_vật
+thủ_tục cấp giấy chứng_nhận kiểm_dịch thực_vật đối_với các lô vật_thể vận_chuyển từ vùng nhiễm đối_tượng kiểm_dịch thực_vật
+cấp giấy chứng_nhận đủ điều_kiện buôn_bán thuốc thú_y
+cấp giấy xác_nhận nội_dung quảng_cáo thuốc thú_y
+cấp giấy chứng_nhận cơ_sở an_toàn dịch_bệnh động_vật trên cạn
+cấp giấy chứng_nhận cơ_sở an_toàn dịch_bệnh động_vật thủy_sản ( đối_với cơ_sở nuôi_trồng thủy_sản , cơ_sở sản_xuất thủy_sản giống )
+cấp giấy chứng_nhận cơ_sở an_toàn dịch_bệnh động_vật ( trên cạn và thủy_sản ) đối_với cơ_sở phải đánh_giá lại
+cấp giấy chứng_nhận kiểm_dịch động_vật , sản_phẩm động_vật trên cạn vận_chuyển ra khỏi địa_bàn tỉnh
+cấp giấy xác_nhận đủ điều_kiện làm tổng đại_lý kinh_doanh xăng dầu
+thủ_tục cấp phép cho người việt nam định_cư ở nước_ngoài , tổ_chức , cá_nhân nước_ngoài tiến_hành nghiên_cứu sưu_tầm di_sản văn_hóa phi vật_thể tại địa_phương
+thủ_tục cấp giấy chứng_nhận nghiệp_vụ chăm_sóc nạn_nhân bạo_lực gia_đình
+thủ_tục cấp thẻ nhân_viên chăm_sóc nạn_nhân bạo_lực gia_đình
+thủ_tục xét tặng danh_hiệu khu dân_cư văn_hóa hàng năm
+thủ_tục xét tặng giấy khen khu dân_cư văn_hóa
+thủ_tục công_nhận lại xã đạt chuẩn văn_hóa nông_thôn mới
+thủ_tục công_nhận lại phường , thị_trấn đạt chuẩn văn_minh đô_thị
+thẩm_định báo_cáo đánh_giá tác_động môi_trường
+thủ_tục đăng_ký công_bố thông_tin người giám_định tư_pháp xây_dựng theo vụ_việc , tổ_chức giám_định tư_pháp xây_dựng theo vụ_việc đối_với các cá_nhân , tổ_chức không thuộc thẩm_quyền của bộ xây_dựng ...
+thủ_tục cấp chứng_chỉ nhân_viên bức_xạ ( đối_với người phụ_trách an_toàn cơ_sở x-quang chẩn_đoán trong y_tế )
+thủ_tục cấp giấy_phép tiến_hành công_việc bức_xạ - sử_dụng thiết_bị x-quang chẩn_đoán trong y_tế
+thủ_tục cấp lại giấy_phép tiến_hành công_việc bức_xạ ( sử_dụng thiết_bị x-quang chẩn_đoán trong y_tế )
+thủ_tục gia_hạn giấy_phép tiến_hành công_việc bức_xạ - sử_dụng thiết_bị x-quang chẩn_đoán trong y_tế
+thủ_tục sửa_đổi giấy_phép tiến_hành công_việc bức_xạ - sử_dụng thiết_bị x-quang chẩn_đoán trong y_tế
+thủ_tục tặng_thưởng bằng_khen của chủ_tịch ubnd tỉnh về thành_tích đột_xuất
+thủ_tục đăng_ký công_bố hợp chuẩn dựa trên kết_quả chứng_nhận hợp chuẩn của tổ_chức chứng_nhận hợp chuẩn
+thủ_tục khai_báo thiết_bị x-quang chẩn_đoán trong y_tế
+thủ_tục đăng_ký tham_dự sơ_tuyển xét tặng giải_thưởng chất_lượng quốc_gia
+thủ_tục xác_định nhiệm_vụ khoa_học công_nghệ cấp tỉnh
+thủ_tục đánh_giá , nghiệm_thu đề_tài nghiên_cứu khoa_học và phát_triển công_nghệ
+thủ_tục đánh_giá , nghiệm_thu đề_tài khoa_học_xã_hội nhân_văn
+thủ_tục xác_định cơ_quan giải_quyết bồi_thường ( cấp tỉnh )
+thủ_tục chuyển_giao quyết_định giải_quyết bồi_thường
+thủ_tục đăng_ký di_vật , cổ_vật , bảo_vật quốc_gia
+thủ_tục cấp giấy_phép khai_quật khẩn_cấp
+thủ_tục công_nhận bảo_vật quốc_gia đối_với bảo_tàng ngoài công_lập , tổ_chức , cá_nhân là chủ_sở_hữu hoặc đang quản_lý hợp_pháp hiện_vật
+ttbyt_01 công_bố đủ điều_kiện sản_xuất trang_thiết_bị y_tế ( mã_số tthc : 1.003006 )
+ttbyt_02 công_bố tiêu_chuẩn áp_dụng đối_với trang_thiết_bị y_tế thuộc loại a , b ( mã_số tthc : 1.003029 )
+ttbyt_03 công_bố đủ điều_kiện mua_bán trang_thiết_bị y_tế thuộc loại b , c , d ( mã_số tthc : 1.003039 )
+thủ_tục cấp mã_số đơn_vị có quan_hệ với ngân_sách
+xác_nhận nguồn_gốc gỗ trước khi xuất_khẩu
+thẩm_định thiết_kế xây_dựng triển_khai sau thiết_kế cơ_sở / điều_chỉnh thiết_kế xây_dựng triển_khai sau thiết_kế cơ_sở
+thẩm_định báo_cáo nghiên_cứu khả_thi đầu_tư xây_dựng / điều_chỉnh báo_cáo nghiên_cứu khả_thi đầu_tư xây_dựng
+thủ_tục cấp giấy chứng_nhận xuất_xứ ( hoặc phiếu kiểm_soát thu_hoạch ) cho lô nguyên_liệu nhuyễn_thể hai mảnh vỏ
+thủ_tục đăng_ký kiểm_tra , xác_định năng_lực sản_xuất hàng may_mặc của thương_nhân xuất_khẩu hàng dệt_may
+thủ_tục đăng_ký thay_đổi nội_dung đăng_ký hộ kinh_doanh
+cấp giấy_phép bán_lẻ rượu
+cấp giấy_phép bán_lẻ sản_phẩm thuốc_lá
+thủ_tục đăng_ký thay_đổi nội_dung đăng_ký hợp_tác_xã
+thủ_tục thay_đổi cơ_quan đăng_ký hợp_tác_xã
+thủ_tục đăng_ký khi hợp_tác_xã chia
+thủ_tục đăng_ký khi hợp_tác_xã tách
+đăng_ký khi hợp_tác_xã hợp_nhất
+thủ_tục đăng_ký khi hợp_tác_xã sáp_nhập
+thủ_tục cấp giấy_phép kinh_doanh dịch_vụ lữ_hành nội_địa
+thủ_tục cấp thẻ hướng_dẫn_viên du_lịch nội_địa
+thủ_tục cấp thẻ hướng_dẫn_viên du_lịch quốc_tế
+thủ_tục cấp thẻ hướng_dẫn_viên du_lịch tại điểm
+thủ_tục cấp đổi thẻ hướng_dẫn_viên du_lịch quốc_tế , thẻ hướng_dẫn_viên du_lịch nội_địa
+thủ_tục cấp lại thẻ hướng_dẫn_viên du_lịch ( trong trường_hợp thẻ bị mất , bị hư_hỏng hoặc thay_đổi thông_tin trên thẻ )
+thủ_tục cấp giấy chứng_nhận khóa cập_nhật kiến_thức cho hướng_dẫn_viên du_lịch nội_địa và hướng_dẫn_viên du_lịch quốc_tế
+thủ_tục công_nhận hạng cơ_sở lưu_trú du_lịch : hạng 1 sao , 2 sao , 3 sao đối_với khách_sạn , biệt_thự du_lịch , căn_hộ du_lịch , tàu_thủy lưu_trú du_lịch
+thủ_tục xác_nhận hồ_sơ trình hưởng ưu_đãi về tiền thuê đất tại kcn hoà_xá .
+thủ_tục cấp giấy chứng_nhận đủ điều_kiện hoạt_động điểm cung_cấp dịch_vụ trò_chơi điện_tử công_cộng
+thủ_tục đăng_ký thay_đổi thành_viên hợp_danh
+thông_báo thay_đổi thông_tin của cổ_đông sáng_lập công_ty cổ_phần chưa niêm_yết
+thông_báo thay_đổi nội_dung đăng_ký thuế ( trừ thay_đổi phương_pháp tính thuế )
+thủ_tục thông_báo tạm ngừng kinh_doanh
+thủ_tục hiệu_đính thông_tin đăng_ký doanh_nghiệp
+thủ_tục cập_nhật bổ_sung thông_tin đăng_ký doanh_nghiệp
+đăng_ký thay_đổi nội_dung đăng_ký liên_hiệp hợp_tác_xã
+thủ_tục đăng_ký khi liên_hiệp hợp_tác_xã chia
+thủ_tục đăng_ký khi liên_hiệp hợp_tác_xã tách
+thủ_tục đăng_ký khi liên_hiệp hợp_tác_xã hợp_nhất
+thủ_tục đăng_ký khi liên_hiệp hợp_tác_xã sáp_nhập
+thủ_tục thông_báo thay_đổi nội_dung đăng_ký liên_hiệp hợp_tác_xã
+xác_định , xác_định lại mức_độ khuyết_tật và cấp giấy xác_nhận khuyết_tật
+thủ_tục xác_nhận đủ điều_kiện được cấp giấy_phép hoạt_động bảo_tàng ngoài công_lập
+thủ_tục tiếp_nhận thông_báo tổ_chức thi sáng_tác tác_phẩm mỹ_thuật
+thủ_tục cấp giấy_phép sao chép tác_phẩm mỹ_thuật về danh_nhân văn_hoá , anh_hùng dân_tộc , lãnh_tụ
+thủ_tục tổ_chức biểu_diễn nghệ_thuật trên địa_bàn quản_lý ( không thuộc trường_hợp trong khuôn_khổ hợp_tác quốc_tế của các hội chuyên_ngành về nghệ_thuật biểu_diễn thuộc trung_ương , đơn_vị sự_nghiệp công_lập có chức_năng biểu_diễn nghệ_thuật thuộc trung_ương )
+thủ_tục cấp giấy_phép đủ điều_kiện kinh_doanh dịch_vụ vũ_trường
+thủ_tục tiếp_nhận hồ_sơ thông_báo sản_phẩm quảng_cáo trên bảng quảng_cáo , băng-rôn
+thủ_tục cho_phép tổ_chức triển_khai sử_dụng vũ_khí quân_dụng , súng_săn , vũ_khí thể_thao , vật_liệu nổ , công_cụ hỗ_trợ còn tính_năng , tác_dụng được sử_dụng làm đạo_cụ
+thủ_tục tiếp_nhận thông_báo tổ_chức đoàn người thực_hiện quảng_cáo
+đóng cửa mỏ khoáng_sản
+phê_duyệt trữ_lượng khoáng_sản
+cấp giấy_phép mua_bán nguyên_liệu thuốc_lá
+cấp sửa_đổi , bổ_sung giấy_phép mua_bán nguyên_liệu thuốc_lá
+thủ_tục đính_chính giấy chứng_nhận đã cấp ( dùng cho hộ gia_đình , cá_nhân )
+tiếp_nhận , rà_soát biểu_mẫu đăng_ký giá thuộc thẩm_quyền giải_quyết của sở công_thương
+tiếp_nhận , rà_soát biểu_mẫu kê_khai giá thuộc thẩm_quyền giải_quyết của sở công_thương
+đính_chính giấy chứng_nhận đã cấp
+bán hoặc góp vốn bằng tài_sản gắn liền với đất thuê của nhà_nước theo hình_thức thuê đất trả tiền hàng năm
+thủ_tục bán hoặc góp vốn bằng tài_sản gắn liền với đất thuê của nhà_nước theo hình_thức thuê đất trả tiền hàng năm
+cấp giấy_phép lập cơ_sở bán_lẻ thứ nhất , cơ_sở bán_lẻ ngoài cơ_sở bán_lẻ thứ nhất thuộc trường_hợp không phải thực_hiện thủ_tục kiểm_tra nhu_cầu kinh_tế ( ent )
+cấp giấy_phép lập cơ_sở bán_lẻ ngoài cơ_sở bán_lẻ thứ nhất thuộc trường_hợp phải thực_hiện thủ_tục kiểm_tra nhu_cầu kinh_tế ( ent )
+điều_chỉnh tăng diện_tích cơ_sở bán_lẻ thứ nhất trong trung_tâm thương_mại ; tăng diện dích cơ_sở bán_lẻ ngoài cơ_sở bán_lẻ thứ nhất được lập trong trung_tâm thương_mại và không thuộc loại_hình cửa_hàng tiện_lợi , siêu_thị mini , đến mức dưới 500 m2
+điều_chỉnh tăng diện_tích cơ_sở bán_lẻ thứ nhất không nằm trong trung_tâm thương_mại
+điều_chỉnh tăng diện_tích cơ_sở bán_lẻ khác và trường_hợp cơ_sở ngoài cơ_sở bán_lẻ thứ nhất thay_đổi loại_hình_thành cửa_hàng tiện_lợi , siêu_thị mini
+thủ_tục cấp giấy_phép lập cơ_sở bán_lẻ cho_phép cơ_sở bán_lẻ được tiếp_tục hoạt_động
+đăng_ký tổ_chức hội_chợ , triển_lãm thương_mại
+đăng_ký sửa_đổi , bổ_sung nội_dung tổ_chức hội_chợ , triển_lãm thương_mại
+đăng_ký thực_hiện khuyến_mại theo hình_thức mang tính may_rủi
+đăng_ký sửa_đổi , bổ_sung nội_dung chương_trình khuyến_mại theo hình_thức mang tính may_rủi
+thông_báo hoạt_động khuyến_mại
+thông_báo sửa_đổi , bổ_sung nội_dung chương_trình khuyến_mại
+công_bố cơ_sở đủ điều_kiện sản_xuất chế_phẩm diệt côn_trùng , diệt khuẩn dùng trong lĩnh_vực gia_dụng và y_tế
+công_bố đủ điều_kiện điều_trị nghiện chất dạng thuốc_phiện
+công_bố cơ_sở xét_nghiệm đạt tiêu_chuẩn an_toàn sinh_học cấp i , cấp ii
+công_bố lại đối_với cơ_sở đủ điều_kiện điều_trị nghiện chất dạng thuốc_phiện khi có thay_đổi về tên , địa_chỉ , về cơ_sở_vật_chất , trang_thiết_bị và nhân_sự
+công_bố lại đối_với cơ_sở điều_trị sau khi hết thời_hạn bị tạm đình_chỉ
+công_bố cơ_sở đủ điều_kiện tiêm_chủng
+chuyển_tiếp đăng_ký thế_chấp quyền tài_sản phát_sinh từ hợp_đồng mua_bán nhà ở
+đăng_ký bảo_lưu quyền_sở_hữu trong trường_hợp mua_bán tài_sản gắn liền với đất có bảo_lưu quyền_sở_hữu
+thủ_tục cấp giấy_phép hoạt_động dự_báo , cảnh_báo khí_tượng thủy_văn
+sửa_đổi , bổ_sung , gia_hạn giấy_phép hoạt_động dự_báo , cảnh_báo khí_tượng thủy_văn
+thủ_tục cấp lại giấy_phép hoạt_động dự_báo , cảnh_báo khí_tượng thủy_văn
+giao khu_vực biển
+sửa_đổi , bổ_sung quyết_định giao khu_vực biển
+thủ_tục đăng_ký sửa_đổi hiến_chương của tổ_chức tôn_giáo có địa_bàn hoạt_động ở một tỉnh
+thủ_tục đăng_ký thuyên_chuyển chức_sắc , chức_việc , nhà_tu_hành là người đang bị buộc_tội hoặc người chưa được xóa án_tích
+thủ_tục đánh_giá , nghiệm_thu dự_án không nghiệm_thu cơ_sở
+thủ_tục đề_nghị thay_đổi trụ_sở của tổ_chức tôn_giáo , tổ_chức tôn_giáo trực_thuộc
+thủ_tục tuyển_chọn , giao trực_tiếp đề_tài nghiên_cứu khoa_học và phát_triển công_nghệ
+thủ_tục tuyển_chọn , giao trực_tiếp đề_tài thuộc lĩnh_vực khxh & nv
+thủ_tục tuyển_chọn , giao trực_tiếp thực_hiện dự_án khcn
+thủ_tục tuyển_chọn , giao trực_tiếp thực_hiện dự_án sxtn
+thủ_tục đề_nghị cấp đăng_ký pháp_nhân phi thương_mại cho tổ_chức tôn_giáo trực_thuộc có địa_bàn hoạt_động ở một tỉnh
+thủ_tục thông_báo tổ_chức quyên_góp không thuộc quy_định tại điểm a và điểm b khoản 3 điều 19 của nghị_định số 162 / 2017 / nđ-cp
+thủ_tục chia , tách , sáp_nhập , hợp_nhất hội
+thủ_tục báo_cáo tổ_chức đại_hội nhiệm_kỳ , đại_hội bất_thường
+thủ_tục phân_loại đơn_vị hành_chính cấp xã
+thủ_tục xác_nhận phiên_hiệu thanh_niên xung_phong ở cấp tỉnh
+cấp giấy chứng_nhận đủ điều_kiện trạm nạp lpg vào chai
+cấp điều_chỉnh giấy chứng_nhận đủ điều_kiện trạm nạp lpg vào chai
+cấp giấy chứng_nhận đủ điều_kiện trạm nạp lpg vào xe bồn
+cấp điều_chỉnh giấy chứng_nhận đủ điều_kiện trạm nạp lpg vào xe bồn
+cấp giấy_phép hoạt_động tư_vấn chuyên_ngành điện thuộc thẩm_quyền cấp của sở công_thương
+cấp sửa_đổi , bổ_sung giấy_phép hoạt_động tư_vấn chuyên_ngành điện thuộc thẩm_quyền cấp của địa_phương
+cấp giấy_phép hoạt_động phát_điện đối_với nhà_máy điện có quy_mô công_suất dưới 03 mw đặt tại địa_phương
+cấp sửa_đổi , bổ_sung giấy_phép hoạt_động phát_điện đối_với nhà_máy điện có quy_mô dưới 03 mw đặt tại địa_phương
+cấp giấy_phép hoạt_động phân_phối điện đến cấp điện_áp 35_kv tại địa_phương
+cấp sửa_đổi , bổ_sung giấy_phép hoạt_động phân_phối điện đến cấp điện_áp 35_kv tại địa_phương
+xác_nhận tiếp_tục sử_dụng đất nông_nghiệp của hộ gia_đình , cá_nhân khi hết hạn sử_dụng đất đối_với trường_hợp có nhu_cầu
+cấp giấy_phép hoạt_động của phương_tiện thủy nội_địa , phương_tiện cơ_giới , trừ xe mô_tô , xe_gắn_máy , phương_tiện thủy nội_địa thô_sơ của ubnd tỉnh .
+cấp giấy_phép cho các hoạt_động trồng cây lâu_năm trong phạm_vi bảo_vệ công_trình thủy_lợi thuộc thẩm_quyền cấp phép của ubnd tỉnh .
+cấp giấy_phép nuôi_trồng thủy_sản thuộc thẩm_quyền cấp phép của ubnd tỉnh
+cấp gia_hạn , điều_chỉnh nội_dung giấy_phép hoạt_động : nuôi_trồng thủy_sản ; nổ_mìn và các hoạt_động gây nổ khác thuộc thẩm_quyền cấp phép của ubnd tỉnh
+cấp giấy_phép hoạt_động du_lịch , thể_thao , nghiên_cứu khoa_học , kinh_doanh , dịch_vụ thuộc thẩm_quyền cấp phép của ubnd tỉnh
+cấp giấy_phép nổ_mìn và các hoạt_động gây nổ khác thuộc thẩm_quyền cấp phép của ubnd tỉnh
+cấp lại giấy_phép cho các hoạt_động trong phạm_vi bảo_vệ công_trình thủy_lợi trong trường_hợp bị mất , bị rách , hư_hỏng thuộc thẩm_quyền cấp phép của ubnd tỉnh
+cấp lại giấy_phép cho các hoạt_động trong phạm_vi bảo_vệ công_trình thủy_lợi trong trường_hợp tên chủ giấy_phép đã được cấp bị thay_đổi do chuyển_nhượng , sáp_nhập , chia tách , cơ_cấu lại tổ_chức thuộc thẩm_quyền cấp phép của ubnd tỉnh
+phê_duyệt , điều_chỉnh quy_trình vận_hành đối_với công_trình thủy_lợi lớn và công_trình thủy_lợi vừa do ubnd tỉnh quản_lý
+phê_duyệt phương_án , điều_chỉnh phương_án cắm_mốc chỉ_giới phạm_vi bảo_vệ công_trình thủy_lợi trên địa_bàn ubnd tỉnh quản_lý
+chấm_dứt việc chăm_sóc thay_thế cho trẻ_em
+thủ_tục thực_hiện việc giải_trình
+thủ_tục giải_quyết yêu_cầu bồi_thường tại cơ_quan trực_tiếp quản_lý người thi_hành công_vụ gây ra thiệt_hại
+thủ_tục giải_quyết yêu_cầu bồi_thường tại cơ_quan trực_tiếp quản_lý người thi_hành công_vụ gây thiệt_hại
+thủ_tục đăng_ký giám_hộ
+thủ_tục đăng_ký khai_sinh
+thủ_tục đăng_ký khai_sinh lưu_động
+thủ_tục đăng_ký lại khai_sinh
+thủ_tục đăng_ký khai_tử
+thủ_tục đăng_ký khai_tử lưu_động
+thủ_tục đăng_ký lại khai_tử
+thủ_tục đăng_ký_kết_hôn
+thủ_tục đăng_ký_kết_hôn lưu_động
+thủ_tục đăng_ký lại kết_hôn
+thủ_tục cấp giấy xác_nhận tình_trạng hôn_nhân
+thủ_tục đăng_ký_nhận cha , mẹ , con
+đăng_ký việc nuôi con_nuôi trong nước
+thủ_tục thay_đổi , cải_chính , bổ_sung thông_tin hộ_tịch
+thủ_tục chứng_thực chữ_ký trong các giấy_tờ , văn_bản ( áp_dụng cho cả trường_hợp chứng_thực điểm_chỉ và trường_hợp người yêu_cầu chứng_thực không ký , không điểm_chỉ được )
+đăng_ký lại phương_tiện trong trường_hợp chuyển_quyền sở_hữu phương_tiện đồng_thời thay_đổi cơ_quan đăng_ký phương_tiện
+đăng_ký lại phương_tiện trong trường_hợp chuyển_quyền sở_hữu phương_tiện nhưng không thay_đổi cơ_quan đăng_ký phương_tiện
+đăng_ký lại phương_tiện trong trường_hợp chuyển từ cơ_quan đăng_ký khác sang cơ_quan đăng_ký phương_tiện thủy nội_địa
+thủ_tục sửa_lỗi sai_sót trong hợp_đồng , giao_dịch
+thủ_tục chứng_thực di_chúc
+thủ_tục chứng_thực văn_bản từ_chối nhận di_sản
+thủ_tục thôi làm hòa giải viên
+công_bố hoạt_động cảng thủy nội_địa
+chấp_thuận phương_án bảo_đảm an_toàn giao_thông
+phê_duyệt phương_án vận_tải hàng_hóa siêu trường hoặc hàng_hóa siêu trọng trên đường_thủy nội_địa
+thủ_tục xét tặng giấy_khen gia_đình văn_hóa
+thủ_tục công_nhận câu_lạc_bộ thể_thao cơ_sở
+công_nhận hộ nghèo , hộ cận nghèo phát_sinh trong năm
+công_nhận hộ thoát nghèo , hộ thoát cận nghèo trong năm
+hòa giải tranh_chấp đất_đai
+thủ_tục đăng_cai giải thi_đấu , trận đấu do liên_đoàn thể_thao quốc_gia hoặc liên_đoàn thể_thao quốc_tế tổ_chức hoặc đăng_cai tổ_chức
+thủ_tục đăng_cai giải thi_đấu , trận thi_đấu thể_thao thành_tích cao khác do liên_đoàn thể_thao tỉnh , thành_phố trực_thuộc trung_ương tổ_chức
+thủ_tục đăng_cai tổ_chức giải thi_đấu vô_địch từng môn thể_thao của tỉnh , thành_phố trực_thuộc trung_ương .
+thủ_tục cho_phép cơ_sở giáo_dục khác thực_hiện chương_trình giáo_dục tiểu_học
+thủ_tục thông_báo về việc chuyển_nhượng phần vốn góp của các nhà_đầu_tư
+thủ_tục xác_nhận chuyên_gia
+thủ_tục thực_hiện việc kê_khai tài_sản
+đăng_ký khai_thác tuyến
+cấp giấy_phép liên_vận giữa việt nam và lào
+cấp lại giấy_phép liên_vận giữa việt nam và lào
+cấp giấy_phép liên_vận giữa việt nam và campuchia
+cấp lại giấy_phép liên_vận giữa việt nam , lào và campuchia
+cấp giấy_phép liên_vận giữa việt nam , lào và campuchia
+đăng_ký khai_thác tuyến vận_tải hành_khách cố_định giữa việt nam , lào và campuchia
+thủ_tục cấp giấy_phép bưu_chính
+đổi giấy_phép lái_xe do ngành công_an cấp
+đổi giấy_phép lái_xe quân_sự do bộ quốc_phòng cấp
+thủ_tục sửa_đổi , bổ_sung giấy_phép bưu_chính
+thủ_tục cấp văn_bản xác_nhận thông_báo hoạt_động bưu_chính
+cấp mới giấy_phép lái xe
+di_chuyển đăng_ký xe_máy chuyên_dùng ở khác tỉnh , thành_phố trực_thuộc trung_ương
+cấp giấy_phép lưu_hành xe quá_tải_trọng , xe quá_khổ giới_hạn , xe bánh xích , xe vận_chuyển hàng siêu_trường , siêu_trọng trên đường_bộ
+thủ_tục cấp giấy chứng_nhận đủ điều_kiện hoạt_động điểm cung_cấp dịch_vụ trò_chơi điện_tử công_cộng
+cấp giấy_phép thi_công xây_dựng công_trình thiết_yếu trong phạm_vi bảo_vệ kết_cấu_hạ_tầng giao_thông đường_bộ của quốc_lộ , đường_bộ cao_tốc đang khai_thác
+thủ_tục sửa_đổi , bổ_sung giấy chứng_nhận đủ điều_kiện hoạt_động điểm cung_cấp dịch_vụ trò_chơi điện_tử công_cộng
+thủ_tục cấp phép thi_công công_trình đường_bộ trên quốc_lộ đang khai_thác
+cấp phép thi_công nút giao_đấu nối vào quốc_lộ
+chấp_thuận thiết_kế kỹ_thuật và phương_án tổ_chức giao_thông của nút giao_đấu nối vào quốc_lộ
+thủ_tục cấp giấy_phép thiết_lập trang thông_tin điện_tử tổng_hợp
+gia_hạn chấp_thuận thiết_kế kỹ_thuật và phương_án tổ_chức thi_công của nút giao_đấu nối vào quốc_lộ .
+thủ_tục sửa_đổi , bổ_sung giấy_phép thiết_lập trang thông_tin điện_tử tổng_hợp
+chấp_thuận thiết_kế kỹ_thuật và phương_án tổ_chức giao_thông của nút đấu nối tạm_thời có thời_hạn vào quốc_lộ .
+thủ_tục thông_báo thay_đổi phương_thức , phạm_vi cung_cấp dịch_vụ trò_chơi điện_tử g1 trên mạng đã được phê_duyệt
+cấp giấy_phép đào_tạo lái_xe ô_tô
+trưng bày tranh , ảnh và các hình_thức thông_tin khác bên ngoài trụ_sở cơ_quan đại_diện nước_ngoài , tổ_chức nước_ngoài
+thủ_tục cấp giấy_phép xuất_bản bản_tin ( địa_phương )
+cấp giấy_phép xe tập lái
+thủ_tục thay_đổi nội_dung ghi trong giấy_phép xuất_bản bản_tin ( địa_phương )
+đăng_ký hoạt_động đối_với cơ_sở trợ_giúp xã_hội dưới 10 đối_tượng có hoàn_cảnh khó_khăn
+cấp giấy_phép xuất_bản tài_liệu không kinh_doanh ( địa_phương )
+thủ_tục cấp giấy_phép hoạt_động in xuất_bản_phẩm
+thủ_tục cấp giấy_phép in gia_công xuất_bản_phẩm cho nước_ngoài
+thủ_tục cấp giấy_phép tổ_chức triển_lãm , hội_chợ xuất_bản_phẩm
+thủ_tục cấp giấy xác_nhận đăng_ký hoạt_động phát_hành xuất_bản_phẩm
+thủ_tục cấp giấy_phép hoạt_động in
+thủ_tục đăng_ký hoạt_động_cơ_sở in
+thủ_tục thay_đổi thông_tin đăng_ký hoạt_động_cơ_sở in
+thủ_tục đăng_ký sử_dụng máy photocopy màu , máy_in có chức_năng photocopy màu
+thủ_tục chuyển_nhượng máy photocopy màu , máy_in có chức_năng photocopy màu
+giải_quyết yêu_cầu bồi_thường tại cơ_quan trực_tiếp quản_lý người thi_hành công_vụ gây thiệt_hại
+thủ_tục khai_báo hoạt_động_cơ_sở dịch_vụ photocopy
+thủ_tục thay_đổi thông_tin khai_báo hoạt_động_cơ_sở dịch_vụ photocopy
+xét đặc_cách tốt_nghiệp trung_học_phổ_thông
+phúc_khảo bài thi trung_học_phổ_thông quốc_gia
+thủ_tục chỉnh sửa nội_dung văn_bằng , chứng_chỉ
+thủ_tục sáp_nhập , chia tách trường trung_học_phổ_thông
+thủ_tục sáp_nhập , chia tách trường trung_học_phổ_thông chuyên
+thủ_tục sáp_nhập , chia , tách trung_tâm ngoại_ngữ , tin_học
+thành_lập_trường năng_khiếu thể_dục thể_thao thuộc_địa_phương
+cấp phép hoạt_động giáo_dục kỹ_năng sống và hoạt_động giáo_dục ngoài giờ chính khóa
+thủ_tục xác_nhận hoạt_động giáo_dục kỹ_năng sống và hoạt_động giáo_dục ngoài giờ chính khóa
+thủ_tục công_nhận trường trung_học đạt chuẩn quốc_gia
+thủ_tục xếp_hạng trung_tâm giáo_dục thường_xuyên
+thủ_tục chuyển trường đối_với học_sinh trung_học_phổ_thông
+thủ_tục xin học lại tại trường khác đối_với học_sinh trung_học
+thủ_tục phê_duyệt việc dạy và học bằng tiếng nước_ngoài
+kiểm_tra công_tác nghiệm_thu hoàn_thành công_trình ( đối_với các công_trình trên địa_bàn thuộc trách_nhiệm quản_lý của sở xây_dựng , sở quản_lý công_trình xây_dựng chuyên_ngành , trừ các công_trình thuộc thẩm_quyền kiểm_tra của hội_đồng kiểm_tra nhà_nước về công_tác nghiệm_thu công_trình xây_dựng và cơ_quan chuyên_môn về xây_dựng thuộc bộ xây_dựng , bộ quản_lý công_trình xây_dựng chuyên_ngành ) ( thay_thế_thủ_tục tại quyết_định số 833 / qđ-bxd ngày 29/8/2016 của bộ xây_dựng )
+giải_quyết yêu_cầu bồi_thường tại cơ_quan trực_tiếp quản_lý người thi_hành công_vụ gây thiệt_hại ( cấp tỉnh )
+đăng_ký hợp_đồng nhận lao_động thực_tập dưới 90 ngày
+thủ_tục thông_báo thuyên_chuyển chức_sắc , chức_việc , nhà_tu_hành
+thủ_tục đăng_ký mở lớp bồi_dưỡng về tôn_giáo cho người chuyên hoạt_động tôn_giáo
+thủ_tục thông_báo_danh_mục hoạt_động tôn_giáo đối_với tổ_chức có địa_bàn hoạt_động tôn_giáo ở nhiều huyện thuộc một tỉnh
+thủ_tục thông_báo_danh_mục hoạt_động tôn_giáo bổ_sung đối_với tổ_chức có địa_bàn hoạt_động tôn_giáo ở nhiều huyện thuộc một tỉnh
+atvstp01 đăng_ký bản_công_bố sản_phẩm nhập_khẩu đối_với thực_phẩm dinh_dưỡng y_học , thực_phẩm dùng cho chế_độ ăn đặc_biệt , sản_phẩm dinh_dưỡng dùng cho trẻ đến 36 tháng tuổi
+khám giám_định đối_với trường_hợp đã được xác_định tỷ_lệ tạm_thời do trung_tâm giám_định y_khoa tỉnh , thành_phố thực_hiện
+khám giám_định đối_với trường_hợp bổ_sung vết_thương do trung_tâm giám_định y_khoa tỉnh , thành_phố thực_hiện
+khám giám_định đối_với trường_hợp vết_thương còn sót do trung_tâm giám_định y_khoa tỉnh , thành_phố thực_hiện
+atvstp02 đăng_ký bản_công_bố sản_phẩm sản_xuất trong nước đối_với thực_phẩm dinh_dưỡng y_học , thực_phẩm dùng cho chế_độ ăn đặc_biệt , sản_phẩm dinh_dưỡng dùng cho trẻ đến 36 tháng tuổi
+khám giám_định đối_với trường_hợp vết_thương tái_phát do trung_tâm giám_định y_khoa tỉnh , thành_phố thực_hiện
+atvstp03 đăng_ký nội_dung quảng_cáo đối_với sản_phẩm dinh_dưỡng y_học , thực_phẩm dùng cho chế_độ ăn đặc_biệt , sản_phẩm dinh_dưỡng dùng cho trẻ đến 36 tháng tuổi
+khám giám_định lần đầu do bệnh_nghề_nghiệp
+khám giám_định để thực_hiện chế_độ hưu_trí đối_với người lao_động
+khám giám_định để thực_hiện chế_độ tử tuất
+khám giám_định để xác_định lao_động nữ không đủ sức_khỏe để chăm_sóc con sau khi sinh hoặc sau khi nhận con do nhờ người mang thai hộ hoặc phải nghỉ dưỡng_thai
+khám giám_định lại đối_với trường_hợp tái_phát tổn_thương do tai_nạn lao_động
+khám giám_định lại bệnh_nghề_nghiệp tái_phát
+khám giám_định tổng_hợp
+cấp giấy_phép hoạt_động đối_với trạm sơ_cấp_cứu chữ_thập_đỏ
+cấp lại giấy_phép hoạt_động đối_với trạm , điểm sơ_cấp_cứu chữ_thập_đỏ khi thay_đổi địa_điểm
+cấp lại giấy_phép hoạt_động đối_với trạm , điểm sơ_cấp_cứu chữ_thập_đỏ do mất , rách , hỏng
+phê_duyệt lần đầu danh_mục kỹ_thuật của các cơ_sở khám bệnh , chữa bệnh thuộc thẩm_quyền quản_lý của sở y_tế
+phê_duyệt bổ_sung danh_mục kỹ_thuật của các cơ_sở khám bệnh , chữa bệnh thuộc thẩm_quyền quản_lý của sở y_tế
+cho phép người hành_nghề được tiếp_tục hành_nghề khám bệnh , chữa bệnh sau khi bị đình_chỉ hoạt_động chuyên_môn thuộc thẩm_quyền của sở y_tế
+cho phép đoàn khám bệnh , chữa bệnh trong nước tổ_chức khám bệnh , chữa bệnh_nhân_đạo tại cơ_sở khám bệnh , chữa bệnh trực_thuộc sở y_tế
+cho phép đoàn khám bệnh , chữa bệnh nước_ngoài tổ_chức khám bệnh , chữa bệnh_nhân_đạo tại cơ_sở khám bệnh , chữa bệnh trực_thuộc sở y_tế
+cho phép đội khám bệnh , chữa bệnh chữ_thập_đỏ lưu_động tổ_chức khám bệnh , chữa bệnh_nhân_đạo tại cơ_sở khám bệnh , chữa bệnh trực_thuộc sở y_tế
+cho phép áp_dụng thí_điểm kỹ_thuật mới , phương_pháp mới trong khám bệnh , chữa bệnh đối_với kỹ_thuật mới , phương_pháp mới quy_định tại khoản 3 điều 2 thông_tư số 07/2015 / tt-byt thuộc thẩm_quyền quản_lý của sở y_tế
+cho phép áp_dụng chính_thức kỹ_thuật mới , phương_pháp mới trong khám bệnh , chữa bệnh thuộc thẩm_quyền quản_lý của sở y_tế
+công_bố cơ_sở đủ điều_kiện thực_hiện khám sức_khỏe lái_xe thuộc thẩm_quyền sở y_tế
+cấp giấy_phép hoạt_động đối_với trạm_xá , trạm y_tế xã
+cấp giấy_phép hoạt_động đối_với cơ_sở khám bệnh , chữa bệnh khi thay_đổi địa_điểm thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với cơ_sở khám bệnh , chữa bệnh khi thay_đổi tên cơ_sở khám bệnh , chữa bệnh thuộc thẩm_quyền của sở y_tế
+điều_chỉnh giấy_phép hoạt_động đối_với cơ_sở khám bệnh , chữa bệnh khi thay_đổi quy_mô giường_bệnh hoặc cơ_cấu tổ_chức hoặc phạm_vi hoạt_động chuyên_môn thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với cơ_sở khám bệnh , chữa bệnh khi thay_đổi người chịu trách_nhiệm chuyên_môn của cơ_sở khám bệnh , chữa bệnh thuộc thẩm_quyền của sở y_tế
+công_bố cơ_sở đủ điều_kiện thực_hiện khám sức_khỏe thuyền_viên làm_việc trên tàu_biển việt nam
+cấp giấy chứng_nhận người sở_hữu bài thuốc gia_truyền và phương_pháp chữa bệnh gia_truyền thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với nhà_hộ_sinh thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với phòng_khám chuyên_khoa thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với phòng_khám đa_khoa thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với cơ_sở dịch_vụ y_tế thuộc thẩm_quyền của sở y_tế
+cấp giấy_phép hoạt_động đối_với bệnh_viện thuộc sở y_tế và áp_dụng đối_với trường_hợp khi thay_đổi hình_thức tổ_chức , chia tách , hợp_nhất , sáp_nhập
+công_bố đủ điều_kiện thực_hiện khám sức_khỏe cơ_sở khám bệnh , chữa bệnh thuộc thẩm_quyền của sở y_tế
+cấp giấy xác_nhận nội_dung quảng_cáo dịch_vụ khám bệnh , chữa bệnh thuộc thẩm_quyền của sở y_tế
+cho phép cơ_sở khám bệnh , chữa bệnh được tiếp_tục hoạt_động khám bệnh , chữa bệnh sau khi bị đình_chỉ hoạt_động chuyên_môn thuộc thẩm_quyền của sở y_tế
+cấp giấy xác_nhận nội_dung thông_tin thuốc theo hình_thức hội_thảo giới_thiệu thuốc
+cấp giấy xác_nhận nội_dung quảng_cáo mỹ_phẩm
+cấp giấy chứng_nhận đủ điều_kiện sản_xuất mỹ_phẩm
+điều_chỉnh giấy chứng_nhận đủ điều_kiện sản_xuất mỹ_phẩm
+đánh_giá đáp_ứng thực_hành tốt cơ_sở bán_lẻ thuốc
+đánh_giá duy_trì đáp_ứng thực_hành tốt cơ_sở bán_lẻ thuốc
+kiểm_soát thay_đổi khi có thay_đổi thuộc một trong các trường_hợp quy_định tại các điểm c và d khoản 1 điều 11 thông_tư 02/2018 / tt-byt
+đánh_giá đáp_ứng thực_hành tốt phân_phối thuốc , nguyên_liệu làm thuốc
+đánh_giá đáp_ứng thực_hành tốt phân_phối thuốc , nguyên_liệu làm thuốc đối_với cơ_sở kinh_doanh không vì mục_đích thương_mại
+đánh_giá duy_trì đáp_ứng thực_hành tốt phân_phối thuốc , nguyên_liệu làm thuốc
+kiểm_soát thay_đổi khi có thay_đổi thuộc một trong các trường_hợp quy_định tại các điểm d , đ và e khoản 1 điều 11 thông_tư 03/2018 / tt-byt
+cho phép hủy thuốc gây nghiện , thuốc hướng thần , thuốc tiền chất , nguyên_liệu làm_thuốc là dược_chất gây nghiện , dược_chất hướng thần , tiền chất dùng làm thuốc thuộc thẩm_quyền sở y_tế
+cho phép mua thuốc gây nghiện , thuốc hướng thần , thuốc tiền chất , thuốc dạng phối_hợp có chứa tiền chất thuộc thẩm_quyền của sở y_tế
+cấp phép xuất_khẩu thuốc phải kiểm_soát đặc_biệt thuộc hành_lý cá_nhân của tổ_chức , cá_nhân xuất_cảnh gửi theo vận_tải đơn , hàng_hóa mang theo người của tổ_chức , cá_nhân xuất_cảnh để điều_trị bệnh cho bản_thân người xuất_cảnh và không phải là nguyên_liệu làm_thuốc phải kiểm_soát đặc_biệt
+cấp phép nhập_khẩu thuốc thuộc hành_lý cá_nhân của tổ_chức , cá_nhân nhập_cảnh gửi theo vận_tải đơn , hàng_hóa mang theo người của tổ_chức , cá_nhân nhập_cảnh để điều_trị bệnh cho bản_thân người nhập_cảnh
+kê_khai lại giá thuốc sản_xuất trong nước
+công_bố cơ_sở kinh_doanh có tổ_chức kệ thuốc
+thủ_tục cấp giấy_phép tổ_chức triển_lãm do các tổ_chức , cá_nhân tại địa_phương đưa ra nước_ngoài không vì mục_đích thương_mại
+thủ_tục cấp giấy_phép tổ_chức triển_lãm do cá_nhân nước_ngoài tổ_chức tại địa_phương không vì mục_đích thương_mại
+thông_báo tổ_chức triển_lãm do tổ_chức ở địa_phương hoặc cá_nhân tổ_chức tại địa_phương không vì mục_đích thương_mại
+thủ_tục tặng bằng_khen của ủy_ban nhân_dân tỉnh
+thủ_tục tặng cờ thi_đua của ubnd tỉnh
+thủ_tục tặng_thưởng bằng_khen của chủ_tịch ubnd tỉnh theo đợt hoặc chuyên_đề
+thủ_tục tặng cờ thi_đua của ubnd tỉnh theo đợt hoặc chuyên_đề
+thủ_tục tặng_thưởng bằng_khen của chủ_tịch ubnd tỉnh cho gia_đình
+thủ_tục tặng_thưởng bằng_khen của chủ_tịch ubnd tỉnh về thành_tích đối_ngoại
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp huyện huyện về thành_tích thực_hiện nhiệm_vụ chính_trị
+thủ_tục tặng danh_hiệu “ chiến sỹ thi_đua cơ_sở ” .
+thủ_tục tặng danh_hiệu “ lao_động_tiên_tiến ”
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp huyện về thành_tích đột_xuất
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp huyện về khen_thưởng đối_ngoại
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp huyện về khen_thưởng cho gia_đình
+công_nhận và giao quyền quản_lý cho tổ_chức cộng_đồng ( thuộc_địa_bàn quản_lý )
+sửa_đổi , bổ_sung nội_dung quyết_định công_nhận và giao quyền quản_lý cho tổ_chức cộng_đồng ( thuộc_địa_bàn quản_lý )
+thủ_tục cấp giấy_phép điều_chỉnh giấy_phép đủ điều_kiện kinh_doanh dịch_vụ vũ_trường
+chỉnh sửa nội_dung văn_bằng , chứng_chỉ
+cấp phép nuôi_trồng thủy_sản trên biển cho tổ_chức , cá_nhân việt nam ( trong phạm_vi 06 hải_lý )
+cấp , cấp lại giấy xác_nhận đăng_ký nuôi_trồng thủy_sản lồng bè , đối_tượng thủy_sản nuôi chủ_lực
+công_nhận và giao quyền quản_lý cho tổ_chức cộng_đồng ( thuộc địa_bàn từ hai huyện trở_lên )
+sửa_đổi , bổ_sung nội_dung quyết_định công_nhận và giao quyền quản_lý cho tổ_chức cộng_đồng ( thuộc địa_bàn từ hai huyện trở_lên )
+xác_nhận bảng kê lâm_sản
+thủ_tục cho thôi làm tuyên_truyền_viên pháp_luật
+phê_duyệt kế_hoạch hỗ_trợ , can_thiệp đối_với trẻ_em bị xâm_hại hoặc có nguy_cơ bị bạo_lực , bóc_lột , bỏ_rơi và trẻ_em có hoàn_cảnh đặc_biệt
+đăng ký_nhận chăm_sóc thay_thế cho trẻ_em đối_với cá_nhân , người đại_diện gia_đình nhận chăm_sóc thay_thế không phải là người thân_thích của trẻ_em
+thông_báo nhận chăm_sóc thay_thế cho trẻ_em đối_với cá_nhân , người đại_diện gia_đình nhận chăm_sóc thay_thế là người thân_thích của trẻ_em
+chuyển trẻ_em đang được chăm_sóc thay_thế tại cơ_sở trợ_giúp xã_hội đến cá_nhân , gia_đình nhận chăm_sóc thay_thế
+thủ_tục xét tặng danh_hiệu gia_đình văn_hóa hàng năm
+thủ_tục đăng_ký hoạt_động tín_ngưỡng
+thủ_tục đăng_ký bổ_sung hoạt_động tín_ngưỡng
+thủ_tục cấp điều_chỉnh , bổ_sung nội_dung chứng_chỉ năng_lực hoạt_động xây_dựng hạng ii , hạng iii
+thủ_tục đăng_ký sinh_hoạt tôn_giáo tập_trung
+thủ_tục thông_báo_danh_mục hoạt_động tôn_giáo đối_với tổ_chức có địa_bàn hoạt_động tôn_giáo ở một xã
+thủ_tục thông_báo_danh_mục hoạt_động tôn_giáo bổ_sung đối_với tổ_chức có địa_bàn hoạt_động tôn_giáo ở một xã
+thủ_tục đăng_ký thay_đổi người đại_diện của nhóm sinh_hoạt tôn_giáo tập_trung
+thủ_tục đề_nghị thay_đổi địa_điểm sinh_hoạt tôn_giáo tập_trung trong địa_bàn một xã
+xác_nhận nội_dung quảng_cáo phân_bón
+cấp giấy chứng_nhận đủ điều_kiện buôn_bán phân_bón
+thủ_tục thông_báo về việc thay_đổi địa_điểm sinh_hoạt tôn_giáo tập_trung
+thủ_tục cấp giấy_phép đủ điều_kiện kinh_doanh dịch_vụ karaoke
+thủ_tục cấp giấy_phép điều_chỉnh giấy_phép đủ điều_kiện kinh_doanh dịch_vụ karaoke
+mua quyển hóa đơn
+thủ_tục đăng_ký khai_thác nước dưới đất
+cấp sửa_đổi , bổ_sung giấy_phép bán_lẻ sản_phẩm thuốc_lá
+cấp sửa_đổi , bổ_sung giấy_phép bán_lẻ rượu
+thủ_tục đề_nghị thay_đổi địa_điểm sinh_hoạt tôn_giáo tập_trung đến địa_bàn xã khác
+thủ_tục đăng_ký tổ_chức lễ_hội
+thủ_tục thông_báo tổ_chức lễ_hội
+thủ_tục thông_báo tổ_chức lễ_hội cấp xã
+đăng_ký thế_chấp dự_án đầu_tư xây_dựng nhà_ở , nhà ở hình_thành trong tương_lai
+thủ_tục thăng hạng chức_danh nghề_nghiệp viên_chức
+cấp giấy chứng_nhận huấn_luyện kỹ_thuật an_toàn vật_liệu nổ công_nghiệp thuộc thẩm_quyền giải_quyết của sở công_thương
+cấp giấy chứng_nhận huấn_luyện kỹ_thuật an_toàn tiền chất thuốc_nổ
+cấp lại giấy_phép sử_dụng vật_liệu nổ công_nghiệp thuộc thẩm_quyền giải_quyết của sở công_thương
+thu_hồi giấy_phép sử_dụng vật_liệu nổ công_nghiệp
+tách thửa hoặc hợp thửa đất
+chấp_thuận hoạt_động vui_chơi , giải_trí dưới nước tại vùng nước trên tuyến đường_thủy nội_địa địa_phương
+công_bố mở , cho_phép hoạt_động tại vùng nước trên tuyến đường_thủy nội_địa địa_phương ( không thuộc vùng nước trên tuyến đường_thủy nội_địa , vùng nước cảng biển hoặc khu_vực hàng_hải ) , được đánh_dấu , xác_định vị_trí bằng phao hoặc cờ_hiệu có màu_sắc dễ quan_sát
+thủ_tục đóng , không cho_phép hoạt_động tại vùng nước trên tuyến đường_thủy nội_địa địa_phương ( không thuộc vùng nước trên tuyến đường_thủy nội_địa , vùng nước cảng biển hoặc khu_vực hàng_hải ) , được đánh_dấu , xác_định vị_trí bằng phao hoặc cờ_hiệu có màu_sắc dễ quan_sát
+đăng_ký lại phương_tiện hoạt_động vui_chơi , giải_trí dưới nước
+thủ_tục thi nâng ngạch công_chức
+thủ_tục thi thăng hạng chức_danh nghề_nghiệp viên_chức
+cấp giấy_phép sản_xuất rượu thủ_công nhằm mục_đích kinh_doanh
+thủ_tục mua sáng_chế , sáng_kiến
+thủ_tục hỗ_trợ phát_triển tổ_chức trung_gian của thị_trường khoa_học và công_nghệ
+thủ_tục xác_nhận hàng_hóa sử_dụng trực_tiếp cho phát_triển hoạt_động ươm tạo công_nghệ , ươm tạo doanh_nghiệp khoa_học và công_nghệ
+thủ_tục điều_chỉnh nội_dung bản công_bố sử_dụng dấu định_lượng
+thủ_tục công_bố sử_dụng dấu định_lượng
+thủ_tục cấp giấy xác_nhận đăng_ký hoạt_động xét tặng giải_thưởng chất_lượng sản_phẩm , hàng_hoá của tổ_chức , cá_nhân
+thủ_tục chỉ_định tổ_chức đánh_giá sự phù_hợp hoạt_động thử_nghiệm , giám_định , kiểm_định , chứng_nhận
+thủ_tục thay_đổi , bổ_sung phạm_vi , lĩnh_vực đánh_giá sự phù_hợp được chỉ_định
+thủ_tục cấp lại quyết_định chỉ_định tổ_chức đánh_giá sự phù_hợp
+thủ_tục kiểm_tra nhà_nước về chất_lượng sản_phẩm , hàng_hóa hàng_hóa nhóm 2 nhập_khẩu
+thủ_tục miễn_giảm kiểm_tra chất_lượng hàng_hóa nhóm 2 nhập_khẩu
+cấp sửa_đổi , bổ_sung giấy_phép sản_xuất rượu thủ_công nhằm mục_đích kinh_doanh
+cấp giấy_phép hoạt_động cho thuê lại lao_động
+thủ_tục cấp giấy_phép hoạt_động bảo_tàng ngoài công_lập
+thủ_tục cấp giấy_phép triển_lãm mỹ_thuật ( thẩm_quyền của ủy_ban nhân_dân cấp tỉnh )
+thủ_tục cấp giấy_phép xây_dựng tượng_đài , tranh_hoành_tráng
+thủ_tục cấp giấy_phép tổ_chức trại sáng_tác điêu_khắc ( thẩm_quyền của ủy_ban nhân_dân cấp tỉnh )
+thủ_tục cấp lại thẻ nhân_viên chăm_sóc nạn_nhân bạo_lực gia_đình
+thủ_tục thăng hạng chức_danh nghề_nghiệp viên_chức
+chấp_thuận tiến_hành khảo_sát tại thực_địa , lấy mẫu trên mặt_đất để lựa_chọn diện_tích lập đề_án thăm_dò khoáng_sản
+cấp giấy_phép hoạt_động đo_đạc và bản_đồ
+thông_báo thay_đổi tổ_hợp_tác
+thủ_tục cấp lại giấy xác_nhận đăng_ký hoạt_động phát_hành xuất_bản_phẩm
+cung_cấp thông_tin , dữ_liệu , sản_phẩm đo_đạc và bản_đồ
+giải_quyết chế_độ mai_táng_phí đối_với cựu_chiến_binh
+giải_quyết chế_độ mai_táng_phí đối_với thanh_niên xung_phong thời_kỳ chống pháp
+chuyển_đổi cơ_cấu cây_trồng trên đất trồng lúa
+nhận chăm_sóc , nuôi_dưỡng đối_tượng cần bảo_vệ khẩn_cấp
+thủ_tục giải_quyết chế_độ đối_với thân_nhân liệt_sĩ
+thủ_tục giải_quyết chế_độ đối_với anh_hùng lực_lượng_vũ_trang nhân_dân , anh_hùng lao_động trong thời_kỳ kháng_chiến
+thủ_tục giải_quyết chế_độ người hoạt_động cách_mạng hoặc hoạt_động kháng_chiến bị địch bắt tù , đày
+thủ_tục giải_quyết chế_độ người hoạt_động kháng_chiến giải_phóng dân_tộc , bảo_vệ tổ_quốc và làm nghĩa_vụ quốc_tế
+thủ_tục giải_quyết chế_độ người có công giúp_đỡ cách_mạng
+thủ_tục giải_quyết hưởng chế_độ ưu_đãi đối_với con_đẻ của người hoạt_động kháng_chiến bị nhiễm chất_độc hóa_học
+thủ_tục lập sổ theo_dõi và cấp phương_tiện trợ_giúp , dụng_cụ chỉnh_hình
+thủ_tục cho thuê nhà ở sinh_viên thuộc sở_hữu nhà_nước
+thủ_tục công_nhận hạng / công_nhận lại hạng nhà chung_cư
+thủ_tục công_nhận điều_chỉnh hạng nhà chung_cư
+thủ_tục thuê nhà ở công_vụ thuộc thẩm_quyền quản_lý của ubnd cấp tỉnh
+trợ_cấp hàng tháng đối_với thanh_niên xung_phong đã hoàn_thành nhiệm_vụ trong kháng_chiến
+cấp giấy_phép trao_đổi , mua , bán , tặng cho , thuê , lưu_giữ , vận_chuyển mẫu_vật của loài thuộc danh_mục loài được ưu_tiên bảo_vệ
+cấp giấy chứng_nhận cơ_sở bảo_tồn đa_dạng_sinh_học
+1_. thủ_tục cấp giấy xác_nhận là người gốc việt nam
+2 . thủ_tục nhập quốc_tịch việt nam
+1_. thủ_tục xác_định cơ_quan giải_quyết bồi_thường
+3 . thủ_tục giải_quyết yêu_cầu bồi_thường tại cơ_quan trực_tiếp quản_lý người thi_hành công_vụ gây thiệt_hại
+1_. đăng_ký hoạt_động của tổ_chức hành_nghề luật_sư
+2 . thay_đổi nội_dung đăng_ký hoạt_động của tổ_chức hành_nghề luật_sư
+5 . đăng_ký hoạt_động của chi_nhánh của tổ_chức hành_nghề luật_sư
+6 . đăng_ký hành_nghề luật_sư với tư_cách cá_nhân
+7 . đăng_ký hoạt_động của chi_nhánh , công_ty luật nước_ngoài
+8 . thay_đổi nội_dung giấy đăng_ký hoạt_động của chi_nhánh , công_ty luật nước_ngoài
+9 ._hợp_nhất công_ty luật
+10 . sáp_nhập công_ty luật
+13 . đăng_ký hoạt_động của chi_nhánh của công_ty luật nước_ngoài tại việt nam
+1_. đăng_ký hoạt_động của trung_tâm tư_vấn pháp_luật
+2 . đăng_ký hoạt_động cho chi_nhánh của trung_tâm tư_vấn pháp_luật
+3 . thay_đổi nội_dung đăng_ký hoạt_động của trung_tâm tư_vấn pháp_luật , chi_nhánh
+1_. đăng_ký tham_gia trợ_giúp pháp_lý
+2 . thay_đổi nội_dung giấy đăng_ký tham_gia trợ_giúp pháp_lý
+11 . đăng_ký hoạt_động văn_phòng công_chứng
+12 . thay_đổi nội_dung đăng_ký hoạt_động của văn_phòng công_chứng
+13 ._hợp_nhất văn_phòng công_chứng
+14 . đăng_ký hoạt_động văn_phòng công_chứng hợp nhất
+15 . sáp_nhập văn_phòng công_chứng
+16 . thay_đổi nội_dung đăng_ký hoạt_động của văn_phòng công_chứng_nhận sáp_nhập
+17 . chuyển_nhượng văn_phòng công_chứng
+18 . thay_đổi nội_dung đăng_ký hoạt_động của văn_phòng công_chứng_nhận chuyển_nhượng
+7 . thủ_tục phê_duyệt đủ điều_kiện thực_hiện hình_thức đấu_giá trực_tuyến
+1_. đăng_ký làm hòa giải_viên thương_mại vụ_việc
+3 . thay_đổi tên gọi trong giấy đăng_ký hoạt_động trung_tâm hòa_giải thương_mại
+4 . đăng_ký hoạt_động chi_nhánh của trung_tâm hòa_giải thương_mại
+6 . chấm_dứt hoạt_động của trung_tâm hòa_giải thương_mại trong trường_hợp trung_tâm hòa_giải thương_mại tự chấm_dứt hoạt_động
+2 . thủ_tục đăng_ký hoạt_động của chi_nhánh trung_tâm trọng_tài ; đăng_ký hoạt_động của chi_nhánh trung_tâm trọng_tài khi thay_đổi địa_điểm đặt trụ_sở sang tỉnh , thành_phố trực_thuộc trung_ương khác .
+3 . thủ_tục thay_đổi nội_dung giấy đăng_ký của trung_tâm trọng_tài ; thay_đổi nội_dung giấy đăng_ký của chi_nhánh tổn chức trọng_tài nước_ngoài tại việt nam
+4 . thủ_tục thay_đổi nội_dung giấy đăng_ký hoạt_động của chi_nhánh trung_tâm trọng_tài khi thay_đổi trưởng chi_nhánh , địa_điểm đặt trụ_sở của chi_nhánh trong phạm_vi tỉnh , thành_phố trực_thuộc trung_ương
+4 . thay_đổi thông_tin đăng_ký hành_nghề của quản tài_viên
+cấp giấy chứng_nhận đủ điều_kiện sản_xuất thức_ăn chăn_nuôi thương_mại , thức_ăn chăn_nuôi theo đặt_hàng
+đăng_ký mã_số cơ_sở nuôi , trồng các loài động_vật rừng , thực_vật rừng nguy_cấp , quý , hiếm nhóm ii và động_vật , thực_vật hoang_dã nguy_cấp thuộc phụ_lục ii và iii cites
+thủ_tục thông_báo sáp_nhập , hợp_nhất , chia , tách thư_viện đối_với thư_viện thuộc cơ_sở giáo_dục mầm_non , cơ_sở giáo_dục_phổ_thông , cơ_sở giáo_dục nghề_nghiệp và cơ_sở giáo_dục khác ngoài công_lập , thư_viện tư_nhân có phục_vụ cộng_đồng
+thủ_tục thông_báo thành_lập thư_viện đối_với thư_viện cộng_đồng
+thủ_tục thông_báo sáp_nhập , hợp_nhất , chia , tách thư_viện đối_với thư_viện cộng_đồng
+thủ_tục thông_báo chấm_dứt hoạt_động thư_viện cộng_đồng
+thủ_tục quyết_định_giá thuộc thẩm_quyền của cấp tỉnh
+thủ_tục quyết_định thuê tài_sản phục_vụ hoạt_động của cơ_quan , tổ_chức , đơn_vị
+thủ_tục quyết_định chuyển_đổi công_năng sử_dụng tài_sản công trong trường_hợp không thay_đổi đối_tượng quản_lý , sử_dụng tài_sản công
+thủ_tục quyết_định điều_chuyển tài_sản công
+thủ_tục quyết_định bán tài_sản công
+thủ_tục quyết_định hủy_bỏ quyết_định bán đấu_giá tài_sản công
+thủ_tục quyết_định xử_lý_tài_sản công trong trường_hợp bị mất , bị huỷ_hoại
+thủ_tục phê_duyệt đề_án sử_dụng tài_sản công tại đơn_vị sự_nghiệp công_lập vào mục_đích liên_doanh , liên_kết
+thủ_tục quyết_định xử_lý_tài_sản phục_vụ hoạt_động của dự_án khi dự_án kết_thúc
+thủ_tục quyết_định xử_lý_tài_sản bị hư_hỏng , không sử_dụng được hoặc không còn nhu_cầu sử_dụng trong quá_trình thực_hiện dự_án
+thủ_tục mua quyển hóa đơn
+thủ_tục chi thưởng đối_với tổ_chức , cá_nhân phát_hiện tài_sản chôn , giấu , bị vùi lấp , chìm_đắm , tài_sản bị đánh_rơi , bỏ quên
+thủ_tục giao quyền_sở_hữu , quyền sử_dụng tài_sản là kết_quả của nhiệm_vụ khoa_học và công_nghệ ngân_sách cấp
+thủ_tục điều_chuyển công_trình cấp nước_sạch nông_thôn tập_trung
+thủ_tục cho thuê quyền khai_thác công_trình cấp nước_sạch nông_thôn tập_trung .
+thủ_tục thanh_lý công_trình cấp nước_sạch nông_thôn tập_trung
+thủ_tục chuyển_nhượng công_trình cấp nước_sạch nông_thôn tập_trung
+thủ_tục lập phương_án giá tiêu_thụ , mức trợ_giá
+thủ_tục quyết_toán kinh_phí sản_phẩm công_ích giống nông_nghiệp , thủy_sản
+thủ_tục thanh_toán kinh_phí sản_phẩm công_ích giống nông_nghiệp , thủy_sản
+thủ_tục tạm_ứng kinh_phí sản_phẩm công_ích giống nông_nghiệp , thủy_sản
+thủ_tục lập , phân_bổ dự_toán kinh_phí sản_phẩm công_ích giống nông_nghiệp , thủy_sản
+bố_trí ổn_định dân_cư trong huyện
+bố_trí ổn_định dân_cư ngoài huyện , trong tỉnh
+đăng_ký kê_khai số_lượng chăn_nuôi tập_trung và nuôi_trồng thủy_sản ban_đầu
+hỗ_trợ khôi_phục sản_xuất vùng bị thiệt_hại do dịch_bệnh
+hỗ_trợ khôi_phục sản_xuất vùng bị thiệt_hại do thiên_tai
+thăng hạng chức_danh nghề_nghiệp viên_chức
+sang tên chủ_sở_hữu xe_máy chuyên_dùng trong cùng một tỉnh , thành_phố
+đăng_ký xe_máy chuyên_dùng từ tỉnh , thành_phố trực_thuộc trung_ương khác chuyển đến
+thủ_tục tổ_chức cuộc thi , liên_hoan trên địa_bàn quản_lý ( không thuộc trường_hợp toàn_quốc và quốc_tế của các hội chuyên_ngành về nghệ_thuật biểu_diễn thuộc trung_ương , đơn_vị sự_nghiệp công_lập có chức_năng biểu_diễn nghệ_thuật thuộc trung_ương )
+thủ_tục tổ_chức cuộc thi người_đẹp , người_mẫu
+thủ_tục thẩm_định thành_lập thôn ( xóm ) mới , tổ_dân_phố mới
+cấp bổ_sung danh_mục hoạt_động đo_đạc và bản_đồ
+thủ_tục thẩm_định tổ_chức lại đơn_vị sự_nghiệp công_lập thuộc thẩm_quyền quyết_định của ủy_ban nhân_dân cấp tỉnh
+thủ_tục hành_chính về thẩm_định đề_án vị_trí việc_làm đối_với đơn_vị sự_nghiệp công_lập
+thủ_tục hành_chính về thẩm_định điều_chỉnh vị_trí việc_làm đối_với đơn_vị sự_nghiệp công_lập
+thủ_tục hành_chính về thẩm_định số_lượng người làm_việc
+thủ_tục hành_chính về thẩm_định điều_chỉnh số_lượng người làm_việc
+thủ_tục hành_chính thẩm_định tổ_chức lại tổ_chức hành_chính thuộc thẩm_quyền quyết_định của ủy_ban nhân_dân cấp huyện
+thủ_tục thẩm_định tổ_chức lại đơn_vị sự_nghiệp công_lập thuộc thẩm_quyền quyết_định của ủy_ban nhân_dân cấp huyện
+thỏa_thuận thông_số kỹ_thuật xây_dựng cảng thủy nội_địa
+công_bố đóng cảng , bến thủy nội_địa
+công_bố hoạt_động khu neo đậu
+công_bố đóng khu neo đậu
+thỏa_thuận thiết_lập báo_hiệu đường_thủy nội_địa đối_với công_trình xây_dựng , hoạt_động trên đường_thủy nội_địa
+thỏa_thuận thông_số kỹ_thuật xây_dựng bến thủy nội_địa
+thỏa_thuận thông_số kỹ_thuật xây_dựng bến khách ngang sông , bến thủy nội_địa phục_vụ thi_công công_trình chính
+công_bố hoạt_động bến thủy nội_địa
+công_bố hoạt_động bến khách ngang sông , bến thủy nội_địa phục_vụ thi_công công_trình chính
+công_bố mở luồng chuyên_dùng nối với luồng quốc_gia , luồng chuyên_dùng nối với luồng địa_phương
+công_bố đóng luồng đường_thủy nội_địa khi không có nhu_cầu khai_thác , sử_dụng
+thông_báo luồng đường_thủy nội_địa chuyên_dùng
+thỏa_thuận thông_số kỹ_thuật xây_dựng luồng đường_thủy nội_địa
+thỏa_thuận về nội_dung liên_quan đến đường_thủy nội_địa đối_với công_trình không thuộc kết_cấu_hạ_tầng đường_thủy nội_địa và các hoạt_động trên đường_thủy nội_địa
+công_bố hạn_chế giao_thông đường_thủy nội_địa
+thủ_tục hỗ_trợ hướng_dẫn_viên du_lịch bị ảnh_hưởng bởi đại_dịch covid-19
+cấp giấy_phép hoạt_động đối_với phòng_khám , điều_trị bệnh nghề_nghiệp thuộc thẩm_quyền của sở y_tế
+cấp mới giấy chứng_nhận đủ điều_kiện xét_nghiệm khẳng_định các trường_hợp hiv dương_tính thuộc thẩm_quyền của sở y_tế
+điều_chỉnh giấy chứng_nhận đủ điều_kiện xét_nghiệm khẳng_định các trường_hợp hiv dương_tính thuộc thẩm_quyền của sở y_tế
+công_bố đáp_ứng tiêu_chuẩn chế_biến , bào_chế thuốc cổ_truyền đối_với cơ_sở khám bệnh , chữa bệnh bằng y_học cổ_truyền trực_thuộc quản_lý của sở y_tế
+thủ_tục giải_quyết bán phần diện_tích nhà_đất sử_dụng chung_quy_định tại khoản 1 điều 71 nghị_định số 99/2015 / nđ-cp
+thủ_tục cho ý_kiến về kết_quả đánh_giá an_toàn công_trình đối_với công_trình xây_dựng nằm trên địa_bàn tỉnh
+thủ_tục cho ý_kiến về việc kéo_dài thời_hạn sử_dụng của công_trình hết thời_hạn sử_dụng theo thiết_kế nhưng có nhu_cầu sử_dụng tiếp ( trừ trường_hợp nhà ở riêng_lẻ )
+thủ_tục xét đặc_cách bổ_nhiệm vào chức_danh khoa_học , chức_danh công_nghệ_cao hơn không qua thi thăng hạng , không phụ_thuộc năm công_tác
+sáp_nhập , chia , tách trường trung_cấp sư_phạm
+thành_lập phân_hiệu trường trung_cấp sư_phạm hoặc cho_phép thành_lập phân_hiệu trường trung_cấp sư_phạm tư_thục
+phê_duyệt liên_kết giáo_dục
+thủ_tục thẩm_định thiết_kế xây_dựng triển_khai sau thiết_kế cơ_sở / điều_chỉnh thiết_kế xây_dựng triển_khai sau thiết_kế cơ_sở
+thủ_tục bổ_sung giấy_phép tiến_hành công_việc bức_xạ - sử_dụng thiết_bị x-quang chẩn_đoán trong y_tế
+phê_duyệt việc dạy và học bằng tiếng nước_ngoài
+4 . thủ_tục thăng hạng chức_danh nghề_nghiệp viên_chức
+đề_nghị dừng thực_hiện thủ_tục đăng_ký doanh_nghiệp
+chứng_thực chữ_ký trong các giấy_tờ , văn_bản ( áp_dụng cho cả trường_hợp chứng_thực điểm_chỉ và trường_hợp người yêu_cầu chứng_thực không_thể ký , không_thể điểm_chỉ được )
+đăng_ký hợp_đồng theo mẫu , điều_kiện giao_dịch chung bắt_buộc đăng_ký
+đăng_ký hoạt_động bán hàng đa cấp tại địa_phương
+đăng_ký sửa_đổi , bổ_sung nội_dung hoạt_động bán hàng đa cấp tại địa_phương
+chấm_dứt hoạt_động bán hàng đa cấp tại địa_phương
+thông_báo tổ_chức hội_nghị , hội_thảo , đào_tạo về bán hàng đa cấp
+thủ_tục phục_vụ_việc sử_dụng tài_liệu của độc_giả tại phòng đọc
+cấp giấy_phép môi_trường
+cấp điều_chỉnh giấy_phép môi_trường
+cấp giấy_phép sản_xuất rượu công_nghiệp ( quy_mô dưới 3 triệu lít / năm )
+cấp sửa_đổi , bổ_sung giấy_phép sản_xuất rượu công_nghiệp ( quy_mô dưới 3 triệu lít / năm trở lên )
+tham_vấn trong đánh_giá tác_động môi_trường
+lập , thẩm_định , quyết_định , phê_duyệt văn_kiện dự_án hỗ_trợ kỹ_thuật , phi dự_án
+thẩm_định báo_cáo nghiên_cứu tiền khả_thi , quyết_định chủ_trương đầu_tư dự_án ppp do nhà_đầu_tư đề_xuất
+thẩm_định báo_cáo nghiên_cứu khả_thi , quyết_định phê_duyệt dự_án ppp do nhà_đầu_tư đề_xuất
+thẩm_định nội_dung điều_chỉnh chủ_trương đầu_tư , quyết_định điều_chỉnh chủ_trương đầu_tư dự_án ppp do nhà_đầu_tư đề_xuất
+thẩm_định nội_dung điều_chỉnh báo_cáo nghiên_cứu khả_thi , quyết_định phê_duyệt điều_chỉnh dự_án ppp do nhà_đầu_tư đề_xuất
+lập , phê_duyệt kế_hoạch tổng_thể thực_hiện chương_trình , dự_án sử_dụng vốn oda , vốn vay ưu_đãi , vốn đối_ứng
+lập , phê_duyệt kế_hoạch thực_hiện chương_trình , dự_án sử_dụng vốn oda , vốn vay ưu_đãi , vốn đối_ứng hằng năm
+điều_chỉnh tần_suất chạy xe trên tuyến việt nam , lào và campuchia
+cấp lại giấy_phép liên_vận giữa việt nam và campuchia
+cấp giấy_phép vận_tải đường_bộ quốc_tế giữa việt nam và lào
+cấp lại giấy_phép vận_tải đường_bộ quốc_tế giữa việt nam và lào
+đưa người có công đối_với trường_hợp đang được nuôi_dưỡng tại cơ_sở nuôi_dưỡng , điều_dưỡng người có công do tỉnh quản_lý về nuôi_dưỡng tại gia_đình
+cấp trích_lục hoặc sao hồ_sơ người có công với cách_mạng
+vận_hành thử_nghiệm các công_trình xử_lý chất_thải theo quyết_định phê_duyệt báo_cáo đtm của dự_án
+thủ_tục xét tặng danh_hiệu " lao_động_tiên_tiến "
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp xã cho gia_đình .
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp xã về thành_tích đột_xuất .
+thủ_tục tặng giấy_khen của chủ_tịch ubnd cấp xã về thực_hiện nhiệm_vụ chính_trị .
+giải_quyết trợ_cấp tiền_tuất hàng tháng cho thân_nhân khi người có công từ trần
+cấp giấy xác_nhận thân_nhân của người có công
+thủ_tục chuyển_đổi quyền sử_dụng đất nông_nghiệp của hộ gia_đình , cá_nhân để thực_hiện " dồn điền đổi thửa " ( đồng_loạt )
+thủ_tục thẩm_định thành_lập đơn_vị sự_nghiệp công_lập
+thủ_tục thẩm_định giải_thể đơn_vị sự_nghiệp công_lập
+thủ_tục thẩm_định thành_lập tổ_chức hành_chính
+thủ_tục thẩm_định giải_thể tổ_chức hành_chính
+thủ_tục thẩm_định tổ_chức lại tổ_chức hành_chính
+thủ_tục thẩm_định tổ_chức lại đơn_vị sự_nghiệp công_lập
+thủ_tục thông_báo thay_đổi nội_dung đăng_ký hợp_tác_xã
+thăm_viếng mộ liệt_sĩ
+công_bố cơ_sở đủ điều_kiện cung_cấp dịch_vụ diệt côn_trùng , diệt khuẩn trong lĩnh_vực gia_dụng và y_tế bằng chế_phẩm
+thủ_tục đánh_giá , xác_nhận kết_quả thực_hiện nhiệm_vụ khoa_học và công_nghệ không sử_dụng ngân_sách nhà_nước
+thủ_tục xác_minh tài_sản thu_nhập
+thủ_tục chuyển_giao quyết_định giải_quyết bồi_thường
+thủ_tục bán nhà ở cũ thuộc sở_hữu nhà_nước
+đăng_ký hợp_đồng lao_động trực_tiếp giao_kết
+cấp giấy_phép hoạt_động dịch_vụ việc_làm của doanh_nghiệp hoạt_động dịch_vụ việc làm
+thủ_tục sáp_nhập , chia , tách trường trung_học_cơ_sở
+thủ_tục chuyển mục_đích sử_dụng đất phải được phép của cơ_quan nhà_nước có thẩm_quyền đối_với hộ gia_đình , cá_nhân
+thủ_tục thẩm_định kết_quả thực_hiện nhiệm_vụ khoa_học và công_nghệ không sử_dụng ngân_sách nhà_nước mà có tiềm_ẩn yếu_tố ảnh_hưởng đến lợi_ích quốc_gia , quốc_phòng , an_ninh , môi_trường , tính_mạng , sức_khỏe con_người
+thủ_tục giải_quyết bồi_thường tại cơ_quan có trách_nhiệm bồi_thường
+cấp giấy_phép sử_dụng vật_liệu nổ công_nghiệp thuộc thẩm_quyền giải_quyết của sở công_thương
+thủ_tục đánh_giá đồng_thời thẩm_định kết_quả thực_hiện nhiệm_vụ khoa_học và công_nghệ không sử_dụng ngân_sách nhà_nước mà có tiềm_ẩn yếu_tố ảnh_hưởng đến lợi_ích quốc_gia , quốc_phòng , an_ninh , môi_trường , tính_mạng , sức_khỏe con_người
+thủ_tục đánh_giá , nghiệm_thu dự_án có nghiệm_thu cấp cơ_sở
+đưa đối_tượng ra khỏi cơ_sở trợ_giúp trẻ_em
+thủ_tục sáp_nhập , chia , tách trường tiểu_học
+thủ_tục thành_lập trung_tâm học_tập cộng_đồng
+thủ_tục cho_phép trung_tâm học_tập cộng_đồng hoạt_động trở_lại
+thủ_tục hành_chính thẩm_định thành_lập tổ_chức hành_chính
+thủ_tục hành_chính thẩm_định tổ_chức lại tổ_chức hành_chính
+thủ_tục hành_chính thẩm_định giải_thể tổ_chức hành_chính
+thủ_tục thẩm_định đề_án vị_trí việc_làm đối_với đơn tổ_chức hành_chính
+thủ_tục thẩm_định điều_chỉnh vị_trí việc_làm đối_với tổ_chức hành_chính
+thủ_tục chuyển trường đối_với học_sinh trung_học_cơ_sở
+thủ_tục thuyên_chuyển đối_tượng học bổ_túc trung_học_cơ_sở
+thủ_tục chuyển trường đối_với học_sinh tiểu_học
+thủ_tục đặt và tặng giải_thưởng về khoa_học và công_nghệ của tổ_chức , cá_nhân cư_trú hoặc hoạt_động hợp_pháp tại việt nam
+thủ_tục đăng_ký thông_tin kết_quả nghiên_cứu khoa_học và phát_triển công_nghệ được mua bằng ngân_sách nhà_nước thuộc phạm_vi quản_lý của tỉnh , thành_phố trực_thuộc trung_ương

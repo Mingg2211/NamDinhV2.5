@@ -1,16 +1,162 @@
-Tối muốn đăng ký kết hôn
-Thủ tục cấp giấy xác nhận tình trạng hôn nhân
-Tôi muốn cưới thi cần nhưng thủ tục gì.
-Muốn kết hôn cần chuẩn bị những giấy tờ gì?
-Các bước đăng ký kết hôn với người nước ngoài
-Đăng ký lại kết hôn thực hiện như thế nào
-Hồ sơ đăng ký kết hôn gồm những gì? 
-Những giấy tờ gì phải trình khi đăng kí kết hôn?
-Để đăng ký kết hôn cần những điều kiện gì?
-Đơn vị nào sẽ tiếp nhận hồ sơ kết hôn?
-Đăng ký kết hôn có mất phí không?
-Tôi muốn lây chồng nước ngoài thi thủ túc kết hôn thế nào.
-
-
-Hồ sơ thủ tục ra nước ngoài dự thi người đẹp, người mẫu cần những gì? => chỉnh sửa search list token
-chỉnh sửa matching whole word => chinh sua bot understand
+xét tuyển viên chức
+thủ tục thi tuyển viên chức
+thủ tục thi tuyển viên chức
+thủ tục thi tuyển viên chức
+thủ tục thi tuyển viên chức
+thủ tục cấp bản sao từ sổ gốc
+thủ tục cấp bản sao từ sổ gốc
+thủ tục xác minh tài sản, thu nhập
+thủ tục tiếp nhận vào làm viên chức
+thủ tục tiếp nhận vào làm viên chức
+thủ tục chấp thuận nhà đầu tư của ubnd cấp tỉnh
+thủ tục thực hiện việc kê khai tài sản, thu nhập
+đánh giá đáp ứng thực hành tốt cơ sở bán lẻ thuốc
+đề nghị dừng thực hiện thủ tục đăng ký doanh nghiệp
+thủ tục đăng ký thay đổi nội dung đăng ký hợp tác xã
+công nhận hộ nghèo, hộ cận nghèo phát sinh trong năm
+đăng ký hợp đồng nhận lao động thực tập dưới 90 ngày
+thủ tục quyết định giá thuộc thẩm quyền của cấp tỉnh
+cấp giấy chứng nhận đủ điều kiện buôn bán thuốc thú y
+kiểm tra nhà nước về an toàn thực phẩm muối nhập khẩu
+đăng ký hoạt động bán hàng đa cấp tại địa phương
+thủ tục cấp giấy phép vận chuyển thuốc bảo vệ thực vật
+đăng ký thay đổi nội dung đăng ký liên hiệp hợp tác xã
+thủ tục chấp thuận chủ trương đầu tư của ubnd cấp tỉnh
+cấp giấy chứng nhận đủ điều kiện trạm nạp lpg vào chai
+công nhận hộ thoát nghèo, hộ thoát cận nghèo trong năm
+thủ tục cho thuê nhà ở sinh viên thuộc sở hữu nhà nước
+thỏa thuận thông số kỹ thuật xây dựng bến thủy nội địa
+chấm dứt hoạt động bán hàng đa cấp tại địa phương
+thủ tục thông báo thay đổi nội dung đăng ký hợp tác xã
+thủ tục cấp giấy phép hoạt động bảo tàng ngoài công lập
+thủ tục hành chính về thẩm định số lượng người làm việc
+thủ tục thẩm định tổ chức lại đơn vị sự nghiệp công lập
+thủ tục cấp giấy phép kinh doanh dịch vụ lữ hành nội địa
+cấp giấy chứng nhận đủ điều kiện trạm nạp lpg vào xe bồn
+cấp, cấp lại giấy chứng nhận nguồn gốc thủy sản khai thác
+4. thay đổi thông tin đăng ký hành nghề của quản tài viên
+cấp lại giấy chứng nhận đủ điều kiện trạm nạp lpg vào chai
+cấp lại giấy phép liên vận giữa việt nam, lào và campuchia
+thủ tục thuyên chuyển đối tượng học bổ túc trung học cơ sở
+cấp giấy phép hoạt động đối với trạm sơ cấp cứu chữ thập đỏ
+thủ tục cấp giấy phép xây dựng tượng đài, tranh hoành tráng
+thủ tục hành chính thẩm định tổ chức lại tổ chức hành chính
+cấp lại giấy chứng nhận đủ điều kiện trạm nạp lpg vào xe bồn.
+thủ tục cấp giấy phép đủ điều kiện kinh doanh dịch vụ karaoke
+3. thủ tục đăng ký hoạt động của doanh nghiệp đấu giá tài sản
+đăng ký lại phương tiện hoạt động vui chơi, giải trí dưới nước
+7. thay đổi nội dung đăng ký hoạt động văn phòng thừa phát lại
+thủ tục cấp giấy phép đủ điều kiện kinh doanh dịch vụ vũ trường
+giấy chứng nhận đủ điều kiện thương nhân kinh doanh mua bán lng
+thủ tục thông báo thành lập thư viện đối với thư viện cộng đồng
+thủ tục quy trình đánh giá, xếp loại “cộng đồng học tập” cấp xã
+thủ tục công nhận lại phường, thị trấn đạt chuẩn văn minh đô thị
+thủ tục thông báo thay đổi nội dung đăng ký liên hiệp hợp tác xã
+thủ tục đăng ký khai sinh cho người đã có hồ sơ, giấy tờ cá nhân
+12. thay đổi nội dung đăng ký hoạt động của văn phòng công chứng
+công bố đủ điều kiện điều trị nghiện chất dạng thuốc phiện
+cấp điều chỉnh giấy chứng nhận đủ điều kiện trạm nạp lpg vào chai
+thủ tục tiếp nhận thông báo tổ chức thi sáng tác tác phẩm mỹ thuật
+dừng trợ giúp xã hội tại cơ sở trợ giúp xã hội cấp tỉnh, cấp huyện
+cấp giấy chứng nhận huấn luyện kỹ thuật an toàn tiền chất thuốc nổ
+thủ tục hành chính về thẩm định điều chỉnh số lượng người làm việc
+thủ tục điều chỉnh văn bản chấp thuận nhà đầu tư của ubnd cấp tỉnh
+thủ tục cấp giấy chứng nhận đủ điều kiện cửa hàng bán lẻ lpg chai
+thủ tục cấp giấy phép hoạt động dự báo, cảnh báo khí tượng thủy văn
+cấp giấy chứng nhận đủ điều kiện thương nhân kinh doanh mua bán lpg
+cấp điều chỉnh giấy chứng nhận đủ điều kiện trạm nạp lpg vào xe bồn
+cấp giấy chứng nhận đủ điều kiện thương nhân kinh doanh mua bán cng
+cấp giấy chứng nhận đủ điều kiện trạm nạp lpg vào phương tiện vận tải
+đánh giá đáp ứng thực hành tốt phân phối thuốc, nguyên liệu làm thuốc
+cấp văn bản chấp thuận đóng mới, cải hoán, thuê, mua tàu cá trên biển
+cấp giấy chứng nhận đủ điều kiện trạm nạp lng vào phương tiện vận tải.
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao
+gia hạn thời gian lưu hành tại việt nam cho phương tiện của trung quốc
+thủ tục thẩm định đề án vị trí việc làm đối với đơn tổ chức hành chính
+thủ tục cấp giấy chứng nhận đủ điều kiện buôn bán thuốc bảo vệ thực vật
+thủ tục cấp lại giấy phép hoạt động dự báo, cảnh báo khí tượng thủy văn
+cấp lại giấy chứng nhận đủ điều kiện thương nhân kinh doanh mua bán lpg
+cấp lại giấy chứng nhận đủ điều kiện thương nhân kinh doanh mua bán lng
+thủ tục cấp chứng nhận trường mầm non đạt kiểm định chất lượng giáo dục
+thủ tục lập sổ theo dõi và cấp phương tiện trợ giúp, dụng cụ chỉnh hình
+thủ tục thẩm định điều chỉnh vị trí việc làm đối với tổ chức hành chính
+cấp giấy phép hoạt động đối với nhà hộ sinh thuộc thẩm quyền của sở y tế
+7. thủ tục phê duyệt đủ điều kiện thực hiện hình thức đấu giá trực tuyến
+thủ tục cấp chứng nhận trường trung học đạt kiểm định chất lượng giáo dục
+thông báo tổ chức hội nghị, hội thảo, đào tạo về bán hàng đa cấp
+thủ tục hỗ trợ doanh nghiệp, tổ chức, cá nhân thực hiện giải mã công nghệ
+gia hạn thời gian lưu hành tại việt nam cho phương tiện của lào, campuchia
+thủ tục cấp lại giấy chứng nhận đủ điều kiện buôn bán thuốc bảo vệ thực vật
+cấp, gia hạn, cấp lại, cấp đổi chứng chỉ hành nghề đo đạc và bản đồ hạng ii
+thủ tục tiếp nhận thông báo tổ chức đoàn người thực hiện quảng cáo
+thủ tục cho phép cơ sở giáo dục khác thực hiện chương trình giáo dục tiểu học
+đánh giá duy trì đáp ứng thực hành tốt phân phối thuốc, nguyên liệu làm thuốc
+công nhận và giao quyền quản lý cho tổ chức cộng đồng (thuộc địa bàn quản lý)
+thủ tục thay đổi, bổ sung phạm vi, lĩnh vực đánh giá sự phù hợp được chỉ định
+chuyển tiếp đăng ký thế chấp quyền tài sản phát sinh từ hợp đồng mua bán nhà ở
+cấp giấy phép hoạt động đối với phòng khám đa khoa thuộc thẩm quyền của sở y tế
+cấp giấy phép hoạt động đối với cơ sở dịch vụ y tế thuộc thẩm quyền của sở y tế
+4. thủ tục thay đổi nội dung đăng ký hoạt động của doanh nghiệp đấu giá tài sản
+thủ tục công nhận chứng chỉ hành nghề kiến trúc của người nước ngoài ở việt nam
+thủ tục thay đổi giấy phép thành lập và công nhận điều lệ (sửa đổi, bổ sung) quỹ
+thủ tục chuyển đổi chứng chỉ hành nghề kiến trúc của người nước ngoài ở việt nam
+thủ tục công nhận bảo vật quốc gia đối với bảo tàng cấp tỉnh, ban quản lý di tích
+ttbyt_01 công bố đủ điều kiện sản xuất trang thiết bị y tế (mã số tthc: 1.003006)
+di chuyển đăng ký xe máy chuyên dùng ở khác tỉnh, thành phố trực thuộc trung ương
+đổi tên trường trung cấp, trung tâm giáo dục nghề nghiệp có vốn đầu tư nước ngoài
+thủ tục xác nhận đủ điều kiện được cấp giấy phép hoạt động bảo tàng ngoài công lập
+thủ tục đề nghị thay đổi địa điểm sinh hoạt tôn giáo tập trung đến địa bàn xã khác
+thủ tục cấp giấy phép triển lãm mỹ thuật (thẩm quyền của ủy ban nhân dân cấp tỉnh)
+đăng ký sửa đổi, bổ sung nội dung hoạt động bán hàng đa cấp tại địa phương
+cấp phép hoạt động giáo dục kỹ năng sống và hoạt động giáo dục ngoài giờ chính khóa
+thủ tục đề nghị thay đổi địa điểm sinh hoạt tôn giáo tập trung trong địa bàn một xã
+9. đăng ký hoạt động sau khi chuyển đổi loại hình hoạt động văn phòng thừa phát lại
+đăng ký xe máy chuyên dùng từ tỉnh, thành phố trực thuộc trung ương khác chuyển đến
+thủ tục cấp điều chỉnh hạng chứng chỉ hành nghề hoạt động xây dựng hạng ii, hạng iii
+thủ tục thông báo sáp nhập, hợp nhất, chia, tách thư viện đối với thư viện cộng đồng
+điều chỉnh dự án đầu tư thuộc thẩm quyền chấp thuận chủ trương đầu tư của ban quản lý
+tiếp nhận, rà soát biểu mẫu đăng ký giá thuộc thẩm quyền giải quyết của sở công thương
+đăng ký hoạt động đối với cơ sở trợ giúp xã hội dưới 10 đối tượng có hoàn cảnh khó khăn
+thủ tục hành chính về thẩm định đề án vị trí việc làm đối với đơn vị sự nghiệp công lập
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn patin
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn wushu
+cấp lại giấy phép hoạt động đối với trạm, điểm sơ cấp cứu chữ thập đỏ do mất, rách, hỏng
+cấp lại giấy phép hoạt động dịch vụ việc làm của doanh nghiệp hoạt động dịch vụ việc làm
+gia hạn giấy phép lao động cho người lao động nước ngoài làm việc tại việt nam (cấp tỉnh)
+thủ tục cấp giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam
+cấp giấy phép thăm dò nước dưới đất đối với công trình có lưu lượng dưới 3.000 m3/ngày đêm
+thủ tục tiếp nhận hồ sơ thông báo sản phẩm quảng cáo trên bảng quảng cáo, băng-rôn
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn bóng rổ
+công nhận và giao quyền quản lý cho tổ chức cộng đồng (thuộc địa bàn từ hai huyện trở lên)
+công bố hoạt động bến khách ngang sông, bến thủy nội địa phục vụ thi công công trình chính
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn quần vợt
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn bóng ném
+thủ tục xác nhận hoạt động giáo dục kỹ năng sống và hoạt động giáo dục ngoài giờ chính khóa
+cấp lại giấy phép hoạt động đối với trạm, điểm sơ cấp cứu chữ thập đỏ khi thay đổi địa điểm
+thủ tục hỗ trợ tư vấn, hướng dẫn hồ sơ, thủ tục chuyển đổi hộ kinh doanh thành doanh nghiệp
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn quyền anh
+thủ tục hành chính về thẩm định điều chỉnh vị trí việc làm đối với đơn vị sự nghiệp công lập
+cấp giấy phép sử dụng vật liệu nổ công nghiệp thuộc thẩm quyền giải quyết của sở công thương
+thủ tục cấp lại giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam
+thủ tục gia hạn giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam
+thủ tục cấp giấy chứng nhận đủ điều kiện kinh doanh hoạt động thể thao đối với môn lân sư rồng
+chia, tách, sáp nhập trường trung cấp, trung tâm giáo dục nghề nghiệp có vốn đầu tư nước ngoài
+thủ tục điều chỉnh dự án đầu tư thuộc thẩm quyền chấp thuận chủ trương đầu tư của ubnd cấp tỉnh
+cấp, cấp lại giấy xác nhận đăng ký nuôi trồng thủy sản lồng bè, đối tượng thủy sản nuôi chủ lực
+thủ tục cấp giấy phép tổ chức trại sáng tác điêu khắc (thẩm quyền của ủy ban nhân dân cấp tỉnh)
+giải quyết yêu cầu bồi thường tại cơ quan trực tiếp quản lý người thi hành công vụ gây thiệt hại
+thủ tục cấp điều chỉnh, bổ sung nội dung chứng chỉ năng lực hoạt động xây dựng hạng ii, hạng iii
+cấp lại giấy phép sử dụng vật liệu nổ công nghiệp thuộc thẩm quyền giải quyết của sở công thương
+thủ tục điều chỉnh giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam
+thủ tục cấp điều chỉnh, bổ sung nội dung chứng chỉ hành nghề hoạt động xây dựng hạng ii, hạng iii
+cấp giấy chứng nhận kiểm dịch động vật, sản phẩm động vật trên cạn vận chuyển ra khỏi địa bàn tỉnh
+thủ tục chỉ định tổ chức đánh giá sự phù hợp hoạt động thử nghiệm, giám định, kiểm định, chứng nhận
+chấp thuận chủ trương đầu tư của ban quản lý quy định tại khoản 7 điều 33 nghị định số 31/2021/nđ-cp
+thủ tục cấp giấy phép thành lập văn phòng đại diện của doanh nghiệp quảng cáo nước ngoài tại việt nam
+chấp thuận hoạt động vui chơi, giải trí dưới nước tại vùng nước trên tuyến đường thủy nội địa địa phương
+bổ sung, thay thế phương tiện khai thác tuyến vận tải hành khách cố định giữa việt nam, lào và campuchia
+đăng ký thay đổi chủ doanh nghiệp tư nhân trong trường hợp bán, tặng cho doanh nghiệp, chủ doanh nghiệp chết
+thủ tục cấp giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam (2.000063.000.00.00.h40)
+thủ tục gia hạn giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam (2.000327.000.00.00.h40)
+thủ tục cấp lại giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam (2.000450.000.00.00.h40)
+thủ tục điều chỉnh giấy phép thành lập văn phòng đại diện của thương nhân nước ngoài tại việt nam (2.000347.000.00.00.h40)

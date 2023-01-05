@@ -20,19 +20,43 @@ def remove_tone_line(utf8_str):
     return r.sub(lambda m: replaces_dict[m.group(0)], utf8_str)
 
 
+uniChars = "àáảãạâầấẩẫậăằắẳẵặèéẻẽẹêềếểễệđìíỉĩịòóỏõọôồốổỗộơờớởỡợùúủũụưừứửữựỳýỷỹỵÀÁẢÃẠÂẦẤẨẪẬĂẰẮẲẴẶÈÉẺẼẸÊỀẾỂỄỆĐÌÍỈĨỊÒÓỎÕỌÔỒỐỔỖỘƠỜỚỞỠỢÙÚỦŨỤƯỪỨỬỮỰỲÝỶỸỴÂĂĐÔƠƯ"
+unsignChars = "aaaaaaaaaaaaaaaaaeeeeeeeeeeediiiiiooooooooooooooooouuuuuuuuuuuyyyyyAAAAAAAAAAAAAAAAAEEEEEEEEEEEDIIIOOOOOOOOOOOOOOOOOOOUUUUUUUUUUUYYYYYAADOOU"
+
+
+def loaddicchar():
+    dic = {}
+    char1252 = 'à|á|ả|ã|ạ|ầ|ấ|ẩ|ẫ|ậ|ằ|ắ|ẳ|ẵ|ặ|è|é|ẻ|ẽ|ẹ|ề|ế|ể|ễ|ệ|ì|í|ỉ|ĩ|ị|ò|ó|ỏ|õ|ọ|ồ|ố|ổ|ỗ|ộ|ờ|ớ|ở|ỡ|ợ|ù|ú|ủ|ũ|ụ|ừ|ứ|ử|ữ|ự|ỳ|ý|ỷ|ỹ|ỵ|À|Á|Ả|Ã|Ạ|Ầ|Ấ|Ẩ|Ẫ|Ậ|Ằ|Ắ|Ẳ|Ẵ|Ặ|È|É|Ẻ|Ẽ|Ẹ|Ề|Ế|Ể|Ễ|Ệ|Ì|Í|Ỉ|Ĩ|Ị|Ò|Ó|Ỏ|Õ|Ọ|Ồ|Ố|Ổ|Ỗ|Ộ|Ờ|Ớ|Ở|Ỡ|Ợ|Ù|Ú|Ủ|Ũ|Ụ|Ừ|Ứ|Ử|Ữ|Ự|Ỳ|Ý|Ỷ|Ỹ|Ỵ'.split(
+        '|')
+    charutf8 = "à|á|ả|ã|ạ|ầ|ấ|ẩ|ẫ|ậ|ằ|ắ|ẳ|ẵ|ặ|è|é|ẻ|ẽ|ẹ|ề|ế|ể|ễ|ệ|ì|í|ỉ|ĩ|ị|ò|ó|ỏ|õ|ọ|ồ|ố|ổ|ỗ|ộ|ờ|ớ|ở|ỡ|ợ|ù|ú|ủ|ũ|ụ|ừ|ứ|ử|ữ|ự|ỳ|ý|ỷ|ỹ|ỵ|À|Á|Ả|Ã|Ạ|Ầ|Ấ|Ẩ|Ẫ|Ậ|Ằ|Ắ|Ẳ|Ẵ|Ặ|È|É|Ẻ|Ẽ|Ẹ|Ề|Ế|Ể|Ễ|Ệ|Ì|Í|Ỉ|Ĩ|Ị|Ò|Ó|Ỏ|Õ|Ọ|Ồ|Ố|Ổ|Ỗ|Ộ|Ờ|Ớ|Ở|Ỡ|Ợ|Ù|Ú|Ủ|Ũ|Ụ|Ừ|Ứ|Ử|Ữ|Ự|Ỳ|Ý|Ỷ|Ỹ|Ỵ".split(
+        '|')
+    for i in range(len(char1252)):
+        dic[char1252[i]] = charutf8[i]
+    return dic
+
+
+dicchar = loaddicchar()
+
+
+def covert_unicode(txt):
+    return re.sub(
+        r'à|á|ả|ã|ạ|ầ|ấ|ẩ|ẫ|ậ|ằ|ắ|ẳ|ẵ|ặ|è|é|ẻ|ẽ|ẹ|ề|ế|ể|ễ|ệ|ì|í|ỉ|ĩ|ị|ò|ó|ỏ|õ|ọ|ồ|ố|ổ|ỗ|ộ|ờ|ớ|ở|ỡ|ợ|ù|ú|ủ|ũ|ụ|ừ|ứ|ử|ữ|ự|ỳ|ý|ỷ|ỹ|ỵ|À|Á|Ả|Ã|Ạ|Ầ|Ấ|Ẩ|Ẫ|Ậ|Ằ|Ắ|Ẳ|Ẵ|Ặ|È|É|Ẻ|Ẽ|Ẹ|Ề|Ế|Ể|Ễ|Ệ|Ì|Í|Ỉ|Ĩ|Ị|Ò|Ó|Ỏ|Õ|Ọ|Ồ|Ố|Ổ|Ỗ|Ộ|Ờ|Ớ|Ở|Ỡ|Ợ|Ù|Ú|Ủ|Ũ|Ụ|Ừ|Ứ|Ử|Ữ|Ự|Ỳ|Ý|Ỷ|Ỹ|Ỵ',
+        lambda x: dicchar[x.group()], txt)
+
+
 def preprocessing(text):
-    text = remove_tone_line(text)
-    text = text.lower()
+    text =covert_unicode(text)
     #stopwords 
-    stopwords = ['thu tuc', 'giai quyet', 'cho hoi', 'cho toi hoi', 'cho toi hoi ve', 'toi muon hoi', 'quy dinh']
+    stopwords = ['thủ tục', 'giải quyết', 'cho hỏi', 'cho tôi hỏi', 'cho tôi hỏi về', 'tôi muốn hỏi', 'quy định', 'hỏi', 'thuộc']
     for word in stopwords:
         if word in text:
             text = text.replace(word, "")
+    text = remove_tone_line(text)
+    text = text.lower()
     text = re.sub(' +', ' ',text)
-    text = re.sub(r'[^\s\wáàảãạăắằẳẵặâấầẩẫậéèẻẽẹêếềểễệóòỏõọôốồổỗộơớờởỡợíìỉĩịúùủũụưứừửữựýỳỷỹỵđ_\.\,]',' ',text)
     return text.strip()
 
-# print(preprocessing('cho toi hoi ve thu tuc giai quyet khieu nai'))
+print(preprocessing('thủ tục tuyển chọn, giao trực tiếp đề tài thuộc lĩnh vực khxh&nv'))
 
 def remove_dup(result_list):
     tmp_list = list(dict.fromkeys(result_list))
@@ -57,7 +81,7 @@ def bot_understand(user_question: str):
                 action.append(key)
                 user_question = user_question.replace(val, '')
     
-        
+    print(user_question)
     for key in keyword_dict.keys():
         for val in keyword_dict[key]:
             if (re.search(r'\b'+val+r'\b', user_question)):
@@ -111,6 +135,16 @@ def search_list_token_in_database(list_user_token: list):
         df1['Count'] = df1['procedure'].index
 
         mingg = list(df1[df1['procedure'] >= n-1]['Count'])
+
+        return mingg
+    if n == 4:
+        df = pd.DataFrame({'procedure': tmp_list})
+
+        df1 = pd.DataFrame(data=df['procedure'].value_counts())
+
+        df1['Count'] = df1['procedure'].index
+
+        mingg = list(df1[df1['procedure'] >= n-2]['Count'])
 
         return mingg
 
