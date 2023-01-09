@@ -68,6 +68,8 @@ def bot_understand(user_question: str):
     global BOT_MEMORY
     keyword_list = []
     action = []
+    user_question_action = preprocessing(user_question)
+    user_question_keyword = user_question_action
     # load keyword dictionary
     with open('../json_data/keyword.json', 'r', encoding='utf-8') as f1:
         keyword_dict = json.load(f1)
@@ -77,16 +79,16 @@ def bot_understand(user_question: str):
     
     for key in action_dict.keys():
         for val in action_dict[key]:
-            if (re.search(r'\b'+val+r'\b', user_question)):
+            if (re.search(r'\b'+val+r'\b', user_question_action)):
                 action.append(key)
-                user_question = user_question.replace(val, '')
+                user_question_action = user_question_action.replace(val, '')
     
     print(user_question)
     for key in keyword_dict.keys():
         for val in keyword_dict[key]:
-            if (re.search(r'\b'+val+r'\b', user_question)):
+            if (re.search(r'\b'+val+r'\b', user_question_keyword)):
                 keyword_list.append(key)
-                user_question = user_question.replace(val, '')
+                user_question_keyword = user_question_keyword.replace(val, '')
                 
 
     BOT_MEMORY.update({'keywords': keyword_list})
@@ -127,28 +129,17 @@ def search_list_token_in_database(list_user_token: list):
         mingg = list(df1[df1['procedure'] == n]['Count'])
 
         return mingg
-    if n == 3:
+    if n >= 3:
         df = pd.DataFrame({'procedure': tmp_list})
 
         df1 = pd.DataFrame(data=df['procedure'].value_counts())
 
         df1['Count'] = df1['procedure'].index
 
-        mingg = list(df1[df1['procedure'] >= n-1]['Count'])
-
-        return mingg
-    if n == 4:
-        df = pd.DataFrame({'procedure': tmp_list})
-
-        df1 = pd.DataFrame(data=df['procedure'].value_counts())
-
-        df1['Count'] = df1['procedure'].index
-
-        mingg = list(df1[df1['procedure'] >= n-2]['Count'])
-
+        mingg = list(df1[df1['procedure'] >= 2]['Count'])
         return mingg
 
-# print(search_list_token_in_database(['ket hon', 'luu dong']))
+print(search_list_token_in_database(['thuoc phien', 'nghien']))
 
 
 def bot_searching(user_question: str):
