@@ -1,7 +1,7 @@
 from bot_brain import *
 import pandas as pd
 
-df = pd.read_csv('../data/new_procedure.csv')
+df = pd.read_csv('../data/ND_procedure.csv')
 procedure_list = df.id.tolist()
 
 not_cover = []

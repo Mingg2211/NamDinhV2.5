@@ -100,7 +100,7 @@ def bot_understand(user_question: str):
 
 
 def search_token_in_database(user_token):
-    df = pd.read_csv('../data/new_procedure.csv', engine='python')
+    df = pd.read_csv('../data/ND_procedure.csv', engine='python')
     # print(df.info())
     user_token = r'\b'+user_token+r'\b'
     procedures = df[df.procedure_name.str.contains(pat=user_token, na=False, regex=True)].id
@@ -199,7 +199,7 @@ def bot_searching(user_question: str):
 # print(bot_searching('Thời hạn giải quyết thủ tục cấp lại giấy đăng ký tham gia trợ giúp pháp lý?'))
 
 def bot_answer(procedure_name, action):
-    df = pd.read_csv('../data/new_procedure.csv', engine='python')
+    df = pd.read_csv('../data/ND_procedure.csv', engine='python')
     df = df.fillna('')
     procedure_name = remove_tone_line(procedure_name)
     index = df.index[df['procedure_name'] == procedure_name].tolist()
